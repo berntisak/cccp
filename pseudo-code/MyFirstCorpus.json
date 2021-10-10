@@ -1,0 +1,31 @@
+{
+    "meta" : {
+        "title" : "Beautiful percussion improvisations",
+        "description" : "Collection of percussive sounds from an improvisation",
+        "clustering" : "SOM", 
+        "date_created" : "2020-12-09",
+        "url" : "*",
+        "comment" : "*"    
+    },
+    "files" : {
+       "0": {
+            "name": "PercussionImpro1.json",
+            "absolute-path": "/Users/musician/music/percussion/sounds"
+        },
+       "1": {
+        "name": "PercussionImpro2.json",
+        "absolute-path": "/Users/musician/music/percussion/sounds"        
+       }
+    },
+    "clustering" : {
+        "descriptors": {
+            "mfcc": 1,
+            "mfcc_std": 1
+        },
+        "SOM-clusters": {
+            "0" : [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3],
+            "1" : [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3],
+            "2" : [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3]
+        }
+    } 
+}
