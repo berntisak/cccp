@@ -1,5 +1,7 @@
 Oppdatert pseudokode 12. nov 2021, Henrik Sundt
 
+Filene CCCP-offline-analyzer-2.1.py og CCCP-offline-analyzer-2.2.py viser to måter å bruke grensesnittet. Begge formene for syntaks / grensesnitt er tilgjengelige til envher tid, men en trenger kun bruke det høyest abstraksjonsnivå (2.1) så lenge det ikke er behov for detaljert kontroll over dataene.
+
 Forslaget er bygd etter tre prinsipper:
 
 - Jobbe på høyt abstraksjonsnivå med kompakt kode og samtidig mulig å ha tilgang til underliggende data
