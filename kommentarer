@@ -1,0 +1,16 @@
+Oppdatert pseudokode 12. nov 2021, Henrik Sundt
+
+Forslaget er bygd etter tre prinsipper:
+
+- Jobbe på høyt abstraksjonsnivå med kompakt kode og samtidig mulig å ha tilgang til underliggende data
+når man trenger det gjennom en mer detaljert syntaks.
+
+- Kunne manipulere data via kommandoer i Python samtidig som datastrukturene er direkte koblet opp mot
+en .json metadata-fil. Vi kan bruke vår egen fil-endelse ".css" som inneholder data i .json-format.
+
+- Hver .json-struktur har et tilhørende objekt i Python. Gjennom serialisering og de-serialisering er det et
+1:1-forhold mellom data i .json-filen og Python-objektene.
+
+Andre kommentarer:
+
+Som nevnt før tenker jeg at metadata som kun er info om artist etc. best redigeres i tekst-editor med støtte for json-formatering. Feltene kan eventuelt endres fra script, i stedet eller i tillegg, om ønskelig. Dersom editoren auto-loader når filen oppdaterer seg, vil en se endringer som scriptet gjør, umiddelbart. Fra Python kan det bli nødvendig å ta "CSSS.update()" el.lign. hvis man gjør endringer i editoren.
