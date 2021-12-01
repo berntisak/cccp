@@ -6,7 +6,7 @@ Instructions for setting up a MQTT broker on Mac:
 2. Edit the mosquitto config file: 
     `nano /usr/local/etc/mosquitto/mosquitto.conf`
 
-3. Scroll down to "Extra listeners" and add a line: 
+3. Add the line: 
     `listener 9001`
 
 4. Save and exit
