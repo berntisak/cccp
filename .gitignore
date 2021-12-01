@@ -2,7 +2,7 @@ mqtt/max/package-lock.json
 mqtt/max/package.json
 mqtt/max/node_modules/
 mqtt/csound/node_modules/
-mqtt/python/nodemodules/
+mqtt/python/node_modules/
 mqtt/csound/package.json
 mqtt/csound/package-lock.json
 mqtt/python/package.json
