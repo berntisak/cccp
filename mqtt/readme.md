@@ -1,15 +1,8 @@
 Instructions for setting up a MQTT broker on Mac:
 
-1. Install the Mosquitto broker using homebrew: 
-    `brew install mosquitto`
+First install the Mosquitto broker using Homebrew: `brew install mosquitto`
 
-2. Edit the mosquitto config file: 
-    `nano /usr/local/etc/mosquitto/mosquitto.conf`
+The broker can be run in command line (useful for debugging) with:
+`/usr/local/opt/mosquitto/sbin/mosquitto -c /usr/local/etc/mosquitto/mosquitto.conf`
 
-3. Add the line: 
-    `listener 9001`
-
-4. Save and exit
-
-5. Run `brew services start mosquitto` to make Mosquitto start automatically on boot
-
+Or it can be set to start automatically on boot with `brew services start mosquitto` 
