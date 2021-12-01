@@ -1,3 +1,7 @@
 mqtt/max/package-lock.json
 mqtt/max/package.json
 mqtt/max/node_modules/
+core/__pycache__/
+core/node_modules/
+core/package-lock.json
+core/package.json
