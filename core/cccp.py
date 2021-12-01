@@ -5,12 +5,12 @@ import threading
 from threading import Timer
 
 class mqtt_client:
-    def __init__(self, broker_ip, port):
+    def __init__(self, broker_ip="127.0.0.1", port=1883):
         self.broker_ip = broker_ip
         self.port = port
         client_id = f'cccp-py-mqtt-{random.randint(0, 1000)}'
         # Set Connecting Client ID
-        self.client = mqtt.Client(client_id, transport='websockets')
+        self.client = mqtt.Client(client_id)
         # For debug printing
         #self.client.on_message=self.on_message
         self.topics = []
@@ -21,7 +21,7 @@ class mqtt_client:
             if rc == 0:
                 print("Connected to MQTT Broker!")
             else:
-                print("Failed to connect, return code %d\n", rc)
+                print("Failed to connect, return code ", rc, " \n")
         #client.username_pw_set(username, password)
         self.client.on_connect = on_connect
         self.client.connect(self.broker_ip, self.port)

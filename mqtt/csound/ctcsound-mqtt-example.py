@@ -19,7 +19,7 @@ def on_message_csound_in_test(client, userdata, message):
     cs.setControlChannel("mqtt_in_value", float(in_value))
 
 # Set up mqtt connection
-m_client = cccp.mqtt_client('127.0.0.1', 9001)
+m_client = cccp.mqtt_client('127.0.0.1')
 # Set up callback for incoming message to /cccp/csound_test 
 m_client.set_callback("/cccp/csound_in_test", on_message_csound_in_test)
 

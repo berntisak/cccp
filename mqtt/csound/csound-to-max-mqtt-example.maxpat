@@ -4,18 +4,18 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 2,
-			"revision" : 0,
+			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1352.0, 494.0, 300.0, 404.0 ],
+		"rect" : [ 807.0, 327.0, 304.0, 404.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
-		"default_fontsize" : 12.0,
+		"default_fontsize" : 11.0,
 		"default_fontface" : 0,
-		"default_fontname" : "Arial",
+		"default_fontname" : "Lato Light",
 		"gridonopen" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
 		"gridsnaponopen" : 1,
@@ -35,7 +35,7 @@
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
-		"style" : "",
+		"style" : "Lato Light",
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
@@ -207,15 +207,15 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "mqtt-client.maxpat",
-				"bootpath" : "~/Code/art-projects/co-creative-spaces/cccp/mqtt/max",
-				"patcherrelativepath" : "../max",
+				"bootpath" : "~/Code/Art Projects/cccp/mqtt/csound",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "max-mqtt-client.js",
-				"bootpath" : "~/Code/art-projects/co-creative-spaces/cccp/mqtt/max",
-				"patcherrelativepath" : "../max",
+				"bootpath" : "~/Code/Art Projects/cccp/mqtt/csound",
+				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -242,8 +242,8 @@
 		"styles" : [ 			{
 				"name" : "Lato Light",
 				"default" : 				{
-					"fontsize" : [ 11.0 ],
-					"fontname" : [ "Lato Light" ]
+					"fontname" : [ "Lato Light" ],
+					"fontsize" : [ 11.0 ]
 				}
 ,
 				"parentstyle" : "",

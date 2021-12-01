@@ -6,7 +6,7 @@ import cccp
 
 
 # Set up mqtt connection
-m_client = cccp.mqtt_client('127.0.0.1', 9001)
+m_client = cccp.mqtt_client('127.0.0.1')
 m_client.start_listening()
 
 while True:
