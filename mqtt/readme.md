@@ -1,4 +1,4 @@
-Instructions for setting up MQTT on Mac (based on instructons from https://subscription.packtpub.com/book/application-development/9781787287815/1/ch01lvl1sec12/installing-a-mosquitto-broker-on-macos):
+Instructions for setting up a MQTT broker on Mac:
 
 1. Install the Mosquitto broker using homebrew: 
     `brew install mosquitto`
