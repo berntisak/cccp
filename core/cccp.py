@@ -4,7 +4,7 @@ import time
 import threading
 from threading import Timer
 
-class mqtt_client:
+class MQTT_Client:
     def __init__(self, broker_ip="127.0.0.1", port=1883):
         self.broker_ip = broker_ip
         self.port = port
@@ -12,35 +12,41 @@ class mqtt_client:
         # Set Connecting Client ID
         self.client = mqtt.Client(client_id)
         # For debug printing
-        #self.client.on_message=self.on_message
+        self.client.on_message=self.on_message
         self.topics = []
+        self.PRINT = 0
 
     def connect(self):
-        print("Trying to connect")
+        print("Trying to connect to ", self.broker_ip, " on port ", self.port)
         def on_connect(client, userdata, flags, rc):
             if rc == 0:
                 print("Connected to MQTT Broker!")
             else:
                 print("Failed to connect, return code ", rc, " \n")
-        #client.username_pw_set(username, password)
         self.client.on_connect = on_connect
         self.client.connect(self.broker_ip, self.port)
 
     def set_callback(self, topic, func):
         self.client.message_callback_add(topic, func)
 
+    def set_print_level(self, print_level):
+        self.PRINT = print_level
+
     def on_message(self, client, userdata, message):
-        print("message received " ,str(message.payload.decode("utf-8")))
-        print("message topic=",message.topic)
-        print("message qos=",message.qos)
-        print("message retain flag=",message.retain)    
+        if (self.PRINT>=2):
+            print("message received " ,str(message.payload.decode("utf-8"))) 
+            print("message topic=",message.topic)
+            print("message qos=",message.qos)
+            print("message retain flag=",message.retain)    
 
     def subscribe(self, topic):
-        print("Subscribing to ", topic)
+        if (self.PRINT>=1):
+            print("Subscribing to ", topic)
         self.topics.append(topic)
 
     def publish(self, topic, value):
-        print("Publishing to ", topic)
+        if (self.PRINT>=1):
+            print("Publishing to ", topic, ": ", value)
         self.client.publish(topic, value)
 
     def start_loop(self):
@@ -55,51 +61,49 @@ class mqtt_client:
         loop.start()
 
 
-class metro:
+class Metro:
     def __init__(self, interval):
         self.interval = interval
-        self.short_cnt = 0
-        self.long_cnt = 0
-        self.short_timeout = 2
-        self.long_timeout = 10
+        self.cnt = 0
+        self.PRINT = False 
+        #self.timeout = 2
 
-    def set_timeout(self, short, long):
-        self.short_timeout = short
-        self.long_timeout = long 
-    
-    def reset_timeout(self, type=None):
-        if type == "short" or type == None:
-            self.short_cnt = 0
-        if type == "long" or type == None:
-            self.long_cnt = 0
+    def set_print(self, print=False):
+        self.PRINT = print
 
-    def dec_counter(self, type, amount):
-        if type == "short":
-            self.short_cnt -= amount
-        elif type == "long":
-            self.long_cnt -= amount 
-        if self.short_cnt < 0:
-            self.short_cnt = 0
-        if self.long_cnt < 0:
-            self.long_cnt = 0
+    def set_timeout(self, time):
+        self.timeout = time
+
+    def reset_timeout(self):
+        self.cnt = 0
+
+    def dec_counter(self, amount):
+        self.cnt -= amount
+        if self.cnt < 0:
+            self.cnt = 0
 
     def counter(self, _cb=None):
         while True: 
-            print("Short time: ", self.short_cnt ,"s - Long time: ", self.long_cnt, "s")
-            self.short_cnt += self.interval
-            self.long_cnt += self.interval
-            if self.short_cnt > self.short_timeout:
-                self.short_cnt = 0
+            if (self.PRINT):
+                print("Tick: ", self.cnt ,"s")
+            time.sleep(self.interval)
+
+    def timeout_counter(self, _cb=None):
+        while True: 
+            if (self.PRINT):
+                print("Tick: ", self.cnt ,"s")
+            self.cnt += self.interval
+            if self.cnt > self.timeout:
+                self.cnt = 0
                 if _cb:
-                    print("\n\nNew phrase from short timeout!\n")
-                    _cb()
-            elif self.long_cnt > self.long_timeout:
-                self.long_cnt = 0
-                if _cb:
-                    print("\n\nNew phrase from lomg timeout!\n")
+                    if (self.PRINT):
+                        print("Counter timed out - calling callback function")
                     _cb()
             time.sleep(self.interval)
 
-    def start_clock(self, _cb):
-        x = threading.Thread(target=self.counter, args=[_cb], daemon=True)
+    def start(self, timeout, _cb=None):
+        if (timeout):
+            x = threading.Thread(target=self.timeout_counter, args=[_cb], daemon=True)
+        else: 
+            x = threading.Thread(target=self.counter, args=[_cb], daemon=True)
         x.start()
