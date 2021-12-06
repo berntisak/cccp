@@ -38,6 +38,7 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
+		"title" : "#1",
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-4",
@@ -45,7 +46,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 308.666666666666629, 387.0, 73.0, 60.0 ],
+					"patching_rect" : [ 308.666666666666629, 387.0, 74.0, 60.0 ],
 					"text" : "This is where comparison takes place"
 				}
 
@@ -64,12 +65,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-81",
-					"linecount" : 5,
+					"linecount" : 7,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 669.0, 519.531372382812606, 263.0, 74.0 ],
-					"text" : "This patch is designed to be easily customizable to different types of corpus. It depends on being placed as an abstraction in a patch where the coll objects named stats and corpus-vectors are populated."
+					"patching_rect" : [ 669.0, 519.531372382812606, 263.0, 100.0 ],
+					"text" : "This patch is designed to be easily customizable to different types of corpus. It depends on being placed as an abstraction in a patch where the coll objects named stats and corpus-vectors are populated. Multiple instances of the module is possible through the naming convention."
 				}
 
 			}
@@ -262,20 +263,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 374.166666666666629, 202.3565673828125, 110.0, 47.0 ],
+					"patching_rect" : [ 389.166666666666629, 200.8565673828125, 110.0, 47.0 ],
 					"text" : "The corpus represented as a list of vectors"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-53",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 898.0, 337.0, 70.0, 22.0 ],
-					"text" : "loadmess 4"
 				}
 
 			}
@@ -345,7 +334,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 59.0, 104.0, 565.0, 537.0 ],
+						"rect" : [ 59.0, 104.0, 462.0, 507.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -375,26 +364,13 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
-									"id" : "obj-6",
-									"linecount" : 2,
+									"id" : "obj-8",
+									"linecount" : 3,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 424.0, 253.5, 117.0, 33.0 ],
-									"text" : "Weights that match the trained vectors"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-4",
-									"linecount" : 16,
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 393.5, 288.5, 122.0, 223.0 ],
-									"text" : "1 1 1 1 1 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 0.076923 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"
+									"patching_rect" : [ 272.0, 358.5, 95.0, 47.0 ],
+									"text" : "All weights set to 1 as default when activated"
 								}
 
 							}
@@ -420,7 +396,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 346.5, 39.0, 165.0, 33.0 ],
+									"patching_rect" : [ 274.5, 39.0, 165.0, 33.0 ],
 									"text" : "Optional/customizable\nSet weights externally",
 									"textjustification" : 1
 								}
@@ -435,7 +411,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 414.0, 74.0, 30.0, 30.0 ]
+									"patching_rect" : [ 342.0, 74.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -611,9 +587,9 @@
 							}
 , 							{
 								"patchline" : 								{
-									"color" : [ 0.692673861980438, 0.109236165881157, 0.051641721278429, 1.0 ],
-									"destination" : [ "obj-4", 0 ],
-									"midpoints" : [ 89.5, 232.768799000000001, 403.0, 232.768799000000001 ],
+									"color" : [ 0.69210946559906, 0.0, 0.063245624303818, 1.0 ],
+									"destination" : [ "obj-7", 0 ],
+									"midpoints" : [ 89.5, 233.5, 180.5, 233.5 ],
 									"order" : 0,
 									"source" : [ "obj-10", 0 ]
 								}
@@ -652,7 +628,7 @@
 								"patchline" : 								{
 									"color" : [ 0.696105659008026, 0.405014932155609, 0.031938593834639, 1.0 ],
 									"destination" : [ "obj-7", 0 ],
-									"midpoints" : [ 423.5, 272.25, 180.5, 272.25 ],
+									"midpoints" : [ 351.5, 272.25, 180.5, 272.25 ],
 									"source" : [ "obj-20", 0 ]
 								}
 
@@ -688,15 +664,6 @@
 									"color" : [ 0.097086057066917, 0.710314154624939, 0.68325537443161, 1.0 ],
 									"destination" : [ "obj-7", 0 ],
 									"source" : [ "obj-3", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"color" : [ 0.692212045192719, 0.0, 0.061481833457947, 1.0 ],
-									"destination" : [ "obj-7", 0 ],
-									"midpoints" : [ 403.0, 534.5, 375.75, 534.5, 375.75, 278.5, 180.5, 278.5 ],
-									"source" : [ "obj-4", 0 ]
 								}
 
 							}
@@ -843,7 +810,7 @@
 						"precision" : 6
 					}
 ,
-					"text" : "coll stats"
+					"text" : "coll #1-stats"
 				}
 
 			}
@@ -867,13 +834,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 322.166666666666629, 182.8565673828125, 147.000000000000057, 22.0 ],
+					"patching_rect" : [ 322.166666666666629, 182.8565673828125, 177.000000000000057, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"precision" : 6
 					}
 ,
-					"text" : "coll corpus-vectors"
+					"text" : "coll #1-corpus-vectors"
 				}
 
 			}
@@ -925,7 +892,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 652.0, 479.531372382812606, 307.0, 130.0 ],
+					"patching_rect" : [ 652.0, 479.531372382812606, 309.0, 146.0 ],
 					"proportion" : 0.5
 				}
 
@@ -1145,15 +1112,6 @@
 					"destination" : [ "obj-3", 0 ],
 					"midpoints" : [ 756.5, 453.5, 309.166666666666629, 453.5 ],
 					"source" : [ "obj-52", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"color" : [ 0.694877564907074, 0.325733304023743, 0.041233859956264, 1.0 ],
-					"destination" : [ "obj-52", 0 ],
-					"midpoints" : [ 907.5, 364.5, 756.5, 364.5 ],
-					"source" : [ "obj-53", 0 ]
 				}
 
 			}

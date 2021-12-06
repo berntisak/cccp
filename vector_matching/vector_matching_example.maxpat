@@ -40,6 +40,19 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 571.5, 355.0, 70.0, 22.0 ],
+					"text" : "loadmess 4"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontface" : 1,
 					"id" : "obj-81",
 					"linecount" : 2,
@@ -81,12 +94,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-76",
-					"linecount" : 18,
+					"linecount" : 19,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 36.5, 60.0, 215.0, 250.0 ],
+					"patching_rect" : [ 36.5, 60.0, 191.0, 263.0 ],
 					"text" : "1492.970581 0.453097 0.517089 3.917361 1.403388 4.222562 -1.277409 0.176684 -2.574893 -1.337548 -0.601414 -0.236161 -0.451203 -0.930616 -0.067748 0.459772 0.831469 1.781765 2.17 1.190487 0.886878 0.473821 0.586353 0.222531 0.215292 0.348788 0.346865 0.41879 0.809573 0.688877 0.654555 0.219188 0.039351 431.941476 39.35948 0.000792 0.000294 0.0007 0.001377 0.011901 0.002384 0.003362 0.007052 0.024782 1. 0.018393 0.005527 0.002769 0.001066 0.002604 0.004763 0.028975 0.007964 0.010917 0.022649 0.04701 0. 0.044464 0.017878"
 				}
 
@@ -246,13 +259,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 304.0, 203.0, 55.0, 22.0 ],
+					"patching_rect" : [ 304.0, 203.0, 141.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"precision" : 6
 					}
 ,
-					"text" : "coll stats"
+					"text" : "coll my_abstraction-stats"
 				}
 
 			}
@@ -299,13 +312,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 424.0, 203.0, 109.0, 22.0 ],
+					"patching_rect" : [ 454.0, 203.0, 194.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"precision" : 6
 					}
 ,
-					"text" : "coll corpus-vectors"
+					"text" : "coll my_abstraction-corpus-vectors"
 				}
 
 			}
@@ -316,7 +329,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 424.0, 174.0, 103.0, 22.0 ],
+					"patching_rect" : [ 454.0, 174.0, 103.0, 22.0 ],
 					"text" : "join 2 @triggers 1"
 				}
 
@@ -352,8 +365,8 @@
 					"numinlets" : 5,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 36.5, 388.0, 160.0, 22.0 ],
-					"text" : "vector_matching"
+					"patching_rect" : [ 36.5, 388.0, 181.0, 22.0 ],
+					"text" : "vector_matching my_abstraction"
 				}
 
 			}
@@ -381,7 +394,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 424.0, 140.0, 131.0, 22.0 ],
+					"patching_rect" : [ 454.0, 140.0, 131.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"precision" : 6
@@ -447,7 +460,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-12", 1 ],
-					"midpoints" : [ 433.5, 167.5, 517.5, 167.5 ],
+					"midpoints" : [ 463.5, 167.5, 547.5, 167.5 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -462,7 +475,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"midpoints" : [ 373.5, 73.5, 433.5, 73.5 ],
+					"midpoints" : [ 373.5, 73.5, 463.5, 73.5 ],
 					"source" : [ "obj-11", 1 ]
 				}
 
@@ -499,6 +512,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-65", 0 ],
+					"hidden" : 1,
+					"midpoints" : [ 581.0, 381.0, 558.0, 381.0, 558.0, 350.0, 369.0, 350.0 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-48", 0 ],
 					"source" : [ "obj-45", 0 ]
 				}
@@ -521,7 +543,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 1 ],
-					"midpoints" : [ 310.5, 371.5, 81.25, 371.5 ],
+					"midpoints" : [ 310.5, 371.5, 86.5, 371.5 ],
 					"source" : [ "obj-55", 0 ]
 				}
 
@@ -529,7 +551,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 2 ],
-					"midpoints" : [ 330.0, 375.5, 116.5, 375.5 ],
+					"midpoints" : [ 330.0, 375.5, 127.0, 375.5 ],
 					"source" : [ "obj-57", 0 ]
 				}
 
@@ -537,7 +559,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 3 ],
-					"midpoints" : [ 349.5, 379.0, 151.75, 379.0 ],
+					"midpoints" : [ 349.5, 379.0, 167.5, 379.0 ],
 					"source" : [ "obj-61", 0 ]
 				}
 
@@ -545,7 +567,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 4 ],
-					"midpoints" : [ 369.0, 383.0, 187.0, 383.0 ],
+					"midpoints" : [ 369.0, 383.0, 208.0, 383.0 ],
 					"source" : [ "obj-65", 0 ]
 				}
 
@@ -567,6 +589,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-74", 0 ],
+					"midpoints" : [ 208.0, 415.0, 187.0, 415.0 ],
 					"source" : [ "obj-8", 1 ]
 				}
 
@@ -574,21 +597,21 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "dummy_vectors.txt",
-				"bootpath" : "~/Documents/Privat/PhD/IMS/Moduler",
+				"bootpath" : "~/Documents/Privat/PhD/IMS/cccp/vector_matching",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "dummy_stats.txt",
-				"bootpath" : "~/Documents/Privat/PhD/IMS/Moduler",
+				"bootpath" : "~/Documents/Privat/PhD/IMS/cccp/vector_matching",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "vector_matching.maxpat",
-				"bootpath" : "~/Documents/Privat/PhD/IMS/Moduler",
+				"bootpath" : "~/Documents/Privat/PhD/IMS/cccp/vector_matching",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
