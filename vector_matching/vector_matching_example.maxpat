@@ -394,13 +394,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 454.0, 140.0, 131.0, 22.0 ],
+					"patching_rect" : [ 454.0, 140.0, 172.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"precision" : 6
 					}
 ,
-					"text" : "coll dummy_vectors.txt"
+					"text" : "coll dummy_scaled_vectors.txt"
 				}
 
 			}
@@ -596,7 +596,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "dummy_vectors.txt",
+				"name" : "dummy_scaled_vectors.txt",
 				"bootpath" : "~/Documents/Privat/PhD/IMS/cccp/vector_matching",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
