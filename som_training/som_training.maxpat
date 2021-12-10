@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 167.0, 101.0, 596.0, 553.0 ],
+		"rect" : [ 59.0, 79.0, 601.0, 625.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 11.0,
@@ -41,6 +41,3841 @@
 		"title" : "#1",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontface" : 1,
+					"fontname" : "Lucida Sans Typewriter ",
+					"fontsize" : 13.0,
+					"id" : "obj-37",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 31.625, 690.042358000000149, 120.53125, 19.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 37.125, 562.106200999999942, 127.0, 19.0 ],
+					"text" : "6. SOM clustering",
+					"textcolor" : [ 0.070588235294118, 0.070588235294118, 0.070588235294118, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-117",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 314.5, 780.962401999999997, 120.0, 21.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 396.3125, 561.106201000000056, 58.0, 21.0 ],
+					"text" : "-",
+					"textcolor" : [ 0.050980392156863, 0.050980392156863, 0.050980392156863, 1.0 ],
+					"textjustification" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.505882352941176, 0.513725490196078, 0.513725490196078, 1.0 ],
+					"id" : "obj-36",
+					"maxclass" : "multislider",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"orientation" : 0,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 138.75, 780.962401999999997, 166.25, 21.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 283.562484741210938, 561.106201000000056, 285.920440673828125, 21.0 ],
+					"setminmax" : [ 0.0, 2016.0 ],
+					"setstyle" : 1,
+					"slidercolor" : [ 0.172549019607843, 0.894117647058824, 0.996078431372549, 1.0 ],
+					"spacing" : 1,
+					"style" : "tatarism-1-1-6"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-35",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "int", "" ],
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 8,
+							"minor" : 1,
+							"revision" : 5,
+							"architecture" : "x64",
+							"modernui" : 1
+						}
+,
+						"classnamespace" : "box",
+						"rect" : [ 329.0, 95.0, 794.0, 629.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "Default Max 7",
+						"assistshowspatchername" : 0,
+						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 638.0, 362.037598000000003, 87.0, 22.0 ],
+									"text" : "filepath default"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 638.0, 334.037598000000003, 58.0, 22.0 ],
+									"text" : "loadbang"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-30",
+									"maxclass" : "newobj",
+									"numinlets" : 3,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 434.5, 452.042357999999922, 251.0, 22.0 ],
+									"text" : "combine ./ /output/ #1-clusters.txt @triggers 2"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-21",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 590.0, 174.037598000000003, 67.0, 22.0 ],
+									"saved_object_attributes" : 									{
+										"embed" : 0,
+										"precision" : 6
+									}
+,
+									"text" : "coll #0-stat"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-17",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 675.0, 174.037598000000003, 67.0, 22.0 ],
+									"saved_object_attributes" : 									{
+										"embed" : 0,
+										"precision" : 6
+									}
+,
+									"text" : "coll #0-stat"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-12",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 134.539795000000026, 197.0, 55.0, 22.0 ],
+									"text" : "zl slice 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-90",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 170.539795000000026, 254.712401999999997, 82.0, 22.0 ],
+									"text" : "vexpr $f1*$f2"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-49",
+									"maxclass" : "newobj",
+									"numinlets" : 3,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 170.539795000000026, 226.287598000000003, 109.875, 22.0 ],
+									"text" : "vexpr ($f1-$f2)/$f3"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-6",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 576.0, 226.287598000000003, 67.0, 22.0 ],
+									"saved_object_attributes" : 									{
+										"embed" : 0,
+										"precision" : 6
+									}
+,
+									"text" : "coll #0-stat"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-5",
+									"index" : 2,
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 280.750000000000114, 576.537597000000005, 30.0, 30.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "int", "int" ],
+									"patching_rect" : [ 404.539795000000026, 290.674804999999992, 45.5, 22.0 ],
+									"text" : "t i i"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "int", "int" ],
+									"patching_rect" : [ 207.206461666666712, 290.674804999999992, 29.5, 22.0 ],
+									"text" : "t i i"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-2",
+									"index" : 1,
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 170.539795000000026, 576.537597000000005, 30.0, 30.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-1",
+									"index" : 1,
+									"maxclass" : "inlet",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 67.539795000000026, 17.0, 30.0, 30.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-32",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"patching_rect" : [ 431.039795000000026, 329.962401999999997, 29.5, 22.0 ],
+									"text" : "- 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-31",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 170.539795000000026, 362.537598000000003, 38.0, 22.0 ],
+									"text" : "zl.reg"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-67",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 562.039795000000026, 362.037598000000003, 62.0, 22.0 ],
+									"text" : "Working..."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-46",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 365.5, 484.825196000000005, 67.0, 22.0 ],
+									"text" : "loadmess -"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-47",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 280.750000000000114, 523.537598000000003, 72.0, 22.0 ],
+									"text" : "prepend set"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ],
+									"id" : "obj-40",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 404.539795000000026, 166.0, 127.0, 22.0 ],
+									"saved_object_attributes" : 									{
+										"embed" : 0,
+										"precision" : 6
+									}
+,
+									"text" : "coll #1-feature-vectors"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-108",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 431.039795000000026, 362.037598000000003, 129.0, 22.0 ],
+									"text" : "prepend setminmax 0"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-39",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 298.416666666666799, 416.537598000000003, 101.0, 22.0 ],
+									"text" : "s #0-startandstop"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-27",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 333.750000000000114, 362.037598000000003, 57.0, 22.0 ],
+									"text" : "sort -1 -1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-22",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "done", "int", "bang", "bang" ],
+									"patching_rect" : [ 280.750000000000114, 290.674804999999992, 72.0, 22.0 ],
+									"text" : "t done 0 b b"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-20",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 434.5, 484.825196000000005, 81.0, 22.0 ],
+									"text" : "prepend write"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-16",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 38.539795000000026, 362.537598000000003, 90.0, 22.0 ],
+									"text" : "prepend merge"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-15",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 38.539795000000026, 329.962401999999997, 29.5, 23.0 ],
+									"style" : "tatarism",
+									"text" : "join"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-14",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "dump", "length" ],
+									"patching_rect" : [ 170.539795000000026, 136.037598000000003, 253.0, 22.0 ],
+									"text" : "t dump length"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ],
+									"id" : "obj-9",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 170.539795000000026, 166.0, 127.0, 22.0 ],
+									"saved_object_attributes" : 									{
+										"embed" : 0,
+										"precision" : 6
+									}
+,
+									"text" : "coll #1-feature-vectors"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 7,
+									"outlettype" : [ "dump", "bang", "clear", "clear", "weights", "std", "mean" ],
+									"patching_rect" : [ 67.539795000000026, 64.075195000000008, 211.0, 22.0 ],
+									"text" : "t dump b clear clear weights std mean"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.066666666666667, 0.352941176470588, 0.396078431372549, 1.0 ],
+									"id" : "obj-7",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 38.539795000000026, 523.537598000000003, 89.0, 22.0 ],
+									"presentation" : 1,
+									"presentation_rect" : [ 169.960220336914062, 72.46240234375, 89.0, 22.0 ],
+									"saved_object_attributes" : 									{
+										"embed" : 0,
+										"precision" : 6
+									}
+,
+									"text" : "coll #0-clusters"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-45",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 68.539795000000026, 136.037598000000003, 98.0, 23.0 ],
+									"style" : "tatarism",
+									"text" : "join @triggers 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ],
+									"id" : "obj-19",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 67.539795000000026, 103.537598000000003, 122.0, 22.0 ],
+									"saved_object_attributes" : 									{
+										"embed" : 0,
+										"precision" : 6
+									}
+,
+									"text" : "coll #1-SOM_nodes"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-18",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
+									"patching_rect" : [ 38.539795000000026, 290.75, 49.0, 22.0 ],
+									"text" : "zsa.dist"
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-8", 0 ],
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-11", 0 ],
+									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"midpoints" : [ 440.539795000000026, 401.787597500000004, 180.039795000000026, 401.787597500000004 ],
+									"source" : [ "obj-108", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-30", 0 ],
+									"midpoints" : [ 647.5, 446.539977999999962, 444.0, 446.539977999999962 ],
+									"source" : [ "obj-11", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-49", 0 ],
+									"source" : [ "obj-12", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-40", 0 ],
+									"source" : [ "obj-14", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-9", 0 ],
+									"source" : [ "obj-14", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-16", 0 ],
+									"source" : [ "obj-15", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"source" : [ "obj-16", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-49", 2 ],
+									"midpoints" : [ 684.5, 221.662598000000003, 270.914795000000026, 221.662598000000003 ],
+									"source" : [ "obj-17", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-15", 0 ],
+									"source" : [ "obj-18", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-14", 0 ],
+									"source" : [ "obj-19", 3 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-45", 0 ],
+									"source" : [ "obj-19", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-45", 1 ],
+									"midpoints" : [ 77.039795000000026, 130.287598000000003, 157.039795000000026, 130.287598000000003 ],
+									"source" : [ "obj-19", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"midpoints" : [ 444.0, 514.681397000000061, 48.039795000000026, 514.681397000000061 ],
+									"source" : [ "obj-20", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-49", 1 ],
+									"midpoints" : [ 599.5, 217.662598000000003, 225.477295000000026, 217.662598000000003 ],
+									"source" : [ "obj-21", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-27", 0 ],
+									"source" : [ "obj-22", 3 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-30", 2 ],
+									"midpoints" : [ 325.583333333333428, 409.858581499999957, 676.0, 409.858581499999957 ],
+									"source" : [ "obj-22", 2 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-31", 0 ],
+									"midpoints" : [ 290.250000000000114, 351.606201499999997, 180.039795000000026, 351.606201499999997 ],
+									"order" : 1,
+									"source" : [ "obj-22", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-39", 0 ],
+									"source" : [ "obj-22", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-47", 0 ],
+									"order" : 0,
+									"source" : [ "obj-22", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"midpoints" : [ 343.250000000000114, 397.287598000000003, 48.039795000000026, 397.287598000000003 ],
+									"source" : [ "obj-27", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-15", 1 ],
+									"midpoints" : [ 227.206461666666712, 321.318603499999995, 58.539795000000026, 321.318603499999995 ],
+									"source" : [ "obj-3", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"midpoints" : [ 216.706461666666712, 560.606201000000056, 180.039795000000026, 560.606201000000056 ],
+									"source" : [ "obj-3", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-20", 0 ],
+									"source" : [ "obj-30", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"source" : [ "obj-31", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-108", 0 ],
+									"source" : [ "obj-32", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-31", 1 ],
+									"midpoints" : [ 414.039795000000026, 355.606201499999997, 199.039795000000026, 355.606201499999997 ],
+									"source" : [ "obj-4", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-32", 0 ],
+									"source" : [ "obj-4", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"source" : [ "obj-40", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-18", 1 ],
+									"source" : [ "obj-45", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-47", 0 ],
+									"midpoints" : [ 375.0, 518.681397000000061, 290.250000000000114, 518.681397000000061 ],
+									"source" : [ "obj-46", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 0 ],
+									"source" : [ "obj-47", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-90", 0 ],
+									"source" : [ "obj-49", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-90", 1 ],
+									"midpoints" : [ 585.5, 251.875, 243.039795000000026, 251.875 ],
+									"source" : [ "obj-6", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-47", 0 ],
+									"midpoints" : [ 571.539795000000026, 405.287598000000003, 290.250000000000114, 405.287598000000003 ],
+									"source" : [ "obj-67", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-17", 0 ],
+									"midpoints" : [ 237.039795000000026, 98.556396500000005, 684.5, 98.556396500000005 ],
+									"source" : [ "obj-8", 5 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-18", 0 ],
+									"midpoints" : [ 141.039795000000026, 98.412597500000004, 48.039795000000026, 98.412597500000004 ],
+									"source" : [ "obj-8", 2 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-19", 0 ],
+									"source" : [ "obj-8", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-21", 0 ],
+									"midpoints" : [ 269.039795000000026, 102.556396500000005, 599.5, 102.556396500000005 ],
+									"source" : [ "obj-8", 6 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"midpoints" : [ 205.039795000000026, 94.306396500000005, 585.5, 94.306396500000005 ],
+									"source" : [ "obj-8", 4 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-67", 0 ],
+									"midpoints" : [ 109.039795000000026, 90.575195000000008, 571.539795000000026, 90.575195000000008 ],
+									"source" : [ "obj-8", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"midpoints" : [ 173.039795000000026, 94.075195000000008, 32.039795000000026, 94.075195000000008, 32.039795000000026, 355.0, 48.039795000000026, 355.0 ],
+									"source" : [ "obj-8", 3 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-12", 0 ],
+									"midpoints" : [ 180.039795000000026, 192.0, 144.039795000000026, 192.0 ],
+									"source" : [ "obj-9", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-22", 0 ],
+									"source" : [ "obj-9", 3 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"source" : [ "obj-9", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-18", 0 ],
+									"midpoints" : [ 180.039795000000026, 283.875, 48.039795000000026, 283.875 ],
+									"source" : [ "obj-90", 0 ]
+								}
+
+							}
+ ],
+						"styles" : [ 							{
+								"name" : "AudioStatus_Menu",
+								"default" : 								{
+									"bgfillcolor" : 									{
+										"type" : "color",
+										"color" : [ 0.294118, 0.313726, 0.337255, 1 ],
+										"color1" : [ 0.454902, 0.462745, 0.482353, 0.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "Audiomix",
+								"default" : 								{
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39
+									}
+
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "Jamoma_highlighted_orange",
+								"default" : 								{
+									"accentcolor" : [ 1.0, 0.5, 0.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "Max 12 Regular",
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "jpatcher001",
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "messageGreen-1",
+								"default" : 								{
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.165741, 0.364658, 0.14032, 0.74 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "messagegold",
+								"default" : 								{
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.764706, 0.592157, 0.101961, 0.74 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "newobjBlue-1",
+								"default" : 								{
+									"accentcolor" : [ 0.317647, 0.654902, 0.976471, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "newobjYellow-1",
+								"default" : 								{
+									"fontsize" : [ 12.059008 ],
+									"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-2-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-2-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-2-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-4-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-4-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-4-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-5",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-6",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-7",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-5",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-5-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-5-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-5-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-6",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-7",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-8",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-5",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-5-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-5-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-5-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-6",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-7",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-8",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-2-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-2-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-2-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-5",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-4",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-5",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-6",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-7",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-7-1",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-7-2",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-7-3",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-8",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-9",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-10",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-11",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-12",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-13",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-14",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-15",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-16",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-17",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-18",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-19",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-1",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-1-3",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-1-4",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-2",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-2-1",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-2-2",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-2-3",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-20",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-21",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-21-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-21-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-21-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-22",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-23",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-24",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-2-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-2-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-2-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-2",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-2-1",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-2-2",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-2-3",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-3",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-5",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-1",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-1-3",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-1-4",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-2",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-2-1",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-2-2",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-2-3",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-5",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-6",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-7",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-7-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-8",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-8-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-9",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 138.75, 749.579956000000152, 194.75, 23.0 ],
+					"saved_object_attributes" : 					{
+						"description" : "",
+						"digest" : "",
+						"globalpatchername" : "",
+						"tags" : ""
+					}
+,
+					"text" : "p clustering"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 31.46875, 711.042358000000149, 72.0, 23.0 ],
+					"text" : "loadmess 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-17",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 105.625, 711.042358000000149, 94.0, 23.0 ],
+					"text" : "r #0-startandstop"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-19",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 31.46875, 786.042358000000149, 34.0, 23.0 ],
+					"text" : "sel 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"activebgcolor" : [ 0.172549019607843, 0.894117647058824, 0.996078431372549, 1.0 ],
+					"activebgoncolor" : [ 0.117647058823529, 0.619607843137255, 0.690196078431373, 1.0 ],
+					"activetextoncolor" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ],
+					"fontname" : "Futura Medium",
+					"fontsize" : 16.0,
+					"id" : "obj-22",
+					"maxclass" : "live.text",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 31.46875, 746.579956000000152, 92.6875, 29.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 174.383544921875, 557.106201000000056, 92.6875, 29.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_enum" : [ "val1", "val2" ],
+							"parameter_longname" : "live.text[15]",
+							"parameter_mmax" : 1,
+							"parameter_shortname" : "live.text",
+							"parameter_type" : 2
+						}
+
+					}
+,
+					"text" : "START",
+					"texton" : "WORKING",
+					"varname" : "live.text[3]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Lucida Sans Typewriter ",
+					"fontsize" : 12.0,
+					"id" : "obj-23",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 138.75, 806.042358000000149, 172.0, 18.0 ],
+					"text" : "Clustering using SOM",
+					"textcolor" : [ 0.050980392156863, 0.050980392156863, 0.050980392156863, 1.0 ],
+					"textjustification" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 598.976929515600204, 606.712401999999997, 98.0, 23.0 ],
+					"text" : "join 2 @triggers 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 459.3125, 530.0, 29.5, 23.0 ],
+					"text" : "t l l"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-18",
 					"linecount" : 2,
 					"maxclass" : "comment",
@@ -49,7 +3884,7 @@
 					"patching_rect" : [ 31.96875, 5.962401999999997, 374.0, 35.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 13.0625, 566.0, 369.0, 35.0 ],
+					"presentation_rect" : [ 13.0625, 638.0, 369.0, 35.0 ],
 					"text" : "Based on MASOM - Musical Agents based on Self-Orgainsing Maps\nby Kıvanç Tatar: www.kivanctatar.com"
 				}
 
@@ -73,7 +3908,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 593.476929515600204, 547.712401999999997, 61.0, 21.0 ],
+					"patching_rect" : [ 614.712500000000091, 563.712401999999997, 61.0, 21.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 352.522705078125, 472.712401999999997, 48.0, 21.0 ],
 					"text" : "Training"
@@ -192,7 +4027,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 36.0, 79.0, 859.0, 565.0 ],
+						"rect" : [ 36.0, 79.0, 916.0, 565.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -221,6 +4056,90 @@
 						"subpatcher_template" : "Default Max 7",
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 601.0, 237.0, 87.0, 22.0 ],
+									"text" : "filepath default"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-30",
+									"maxclass" : "newobj",
+									"numinlets" : 3,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 613.0, 392.042357999999922, 275.0, 22.0 ],
+									"text" : "combine ./ /output/  #1-som_nodes.txt @triggers 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 601.0, 267.0, 31.0, 22.0 ],
+									"text" : "t s s"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-17",
+									"maxclass" : "newobj",
+									"numinlets" : 3,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 363.0, 392.042357999999922, 232.0, 22.0 ],
+									"text" : "combine ./ /output/  #1-stat.txt @triggers 2"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-6",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 601.0, 206.0, 58.0, 22.0 ],
+									"text" : "loadbang"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 504.0, 426.0, 81.0, 22.0 ],
+									"text" : "prepend write"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 613.0, 426.0, 81.0, 22.0 ],
+									"text" : "prepend write"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"comment" : "",
 									"id" : "obj-1",
@@ -333,7 +4252,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 288.258179515600204, 352.0, 57.0, 22.0 ],
+									"patching_rect" : [ 288.258179515600204, 359.0, 57.0, 22.0 ],
 									"text" : "sort -1 -1"
 								}
 
@@ -364,30 +4283,6 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-133",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 577.695679515600204, 297.0, 91.0, 22.0 ],
-									"text" : "r #0-folder-path"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-132",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 377.508179515600204, 352.0, 91.0, 22.0 ],
-									"text" : "r #0-folder-path"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"id" : "obj-128",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
@@ -411,18 +4306,6 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-70",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 377.508179515600204, 411.0, 81.0, 22.0 ],
-									"text" : "prepend write"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"id" : "obj-69",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -435,26 +4318,13 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-68",
-									"maxclass" : "newobj",
-									"numinlets" : 2,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 377.508179515600204, 382.042357999999922, 201.0, 22.0 ],
-									"style" : "tatarism",
-									"text" : "combine ./ data/stats.txt @triggers 1"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ],
 									"id" : "obj-67",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 377.508179515600204, 441.042357999999922, 76.0, 22.0 ],
+									"patching_rect" : [ 504.0, 456.042357999999922, 67.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"embed" : 0,
 										"precision" : 6
@@ -502,37 +4372,12 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-23",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 577.695679515600204, 352.0, 81.0, 22.0 ],
-									"text" : "prepend write"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-22",
-									"maxclass" : "newobj",
-									"numinlets" : 2,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 577.695679515600204, 325.0, 239.0, 22.0 ],
-									"style" : "tatarism",
-									"text" : "combine ./ data/SOM-nodes.txt @triggers 1"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"id" : "obj-107",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "int" ],
-									"patching_rect" : [ 251.258179515600204, 352.0, 32.0, 22.0 ],
+									"patching_rect" : [ 251.258179515600204, 359.0, 32.0, 24.0 ],
 									"style" : "tatarism-19",
 									"text" : "t i i"
 								}
@@ -545,7 +4390,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 263.535339000000022, 392.042357999999922, 92.722840515600183, 22.0 ],
+									"patching_rect" : [ 263.535339000000022, 392.042357999999922, 92.722840515600183, 24.0 ],
 									"style" : "tatarism-19",
 									"text" : "join 2"
 								}
@@ -558,7 +4403,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 251.258179515600204, 325.0, 62.0, 22.0 ],
+									"patching_rect" : [ 251.258179515600204, 325.0, 62.0, 24.0 ],
 									"style" : "tatarism-19",
 									"text" : "+ 0"
 								}
@@ -571,7 +4416,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 294.258179515600204, 297.0, 45.0, 22.0 ],
+									"patching_rect" : [ 294.258179515600204, 297.0, 45.0, 24.0 ],
 									"style" : "tatarism-19",
 									"text" : "* 100"
 								}
@@ -584,7 +4429,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 251.258179515600204, 267.0, 105.0, 22.0 ],
+									"patching_rect" : [ 251.258179515600204, 267.0, 105.0, 24.0 ],
 									"style" : "tatarism-19",
 									"text" : "unjoin 0 0 l"
 								}
@@ -690,9 +4535,31 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-67", 0 ],
+									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-178", 0 ],
 									"midpoints" : [ 273.758179515600204, 382.521178999999961, 273.035339000000022, 382.521178999999961 ],
 									"source" : [ "obj-107", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-17", 0 ],
+									"midpoints" : [ 610.5, 322.021178999999961, 372.5, 322.021178999999961 ],
+									"source" : [ "obj-11", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-30", 0 ],
+									"source" : [ "obj-11", 1 ]
 								}
 
 							}
@@ -709,20 +4576,6 @@
 									"destination" : [ "obj-16", 1 ],
 									"midpoints" : [ 46.34375, 293.768799000000058, 329.758179515600204, 293.768799000000058 ],
 									"source" : [ "obj-128", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-68", 0 ],
-									"source" : [ "obj-132", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-22", 0 ],
-									"source" : [ "obj-133", 0 ]
 								}
 
 							}
@@ -788,6 +4641,14 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-10", 0 ],
+									"midpoints" : [ 372.5, 419.521178999999961, 513.5, 419.521178999999961 ],
+									"source" : [ "obj-17", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-174", 1 ],
 									"midpoints" : [ 102.84375, 104.521179000000075, 130.34375, 104.521179000000075 ],
 									"source" : [ "obj-173", 0 ]
@@ -840,6 +4701,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-11", 0 ],
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-173", 0 ],
 									"source" : [ "obj-200", 0 ]
 								}
@@ -869,16 +4737,16 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-23", 0 ],
-									"source" : [ "obj-22", 0 ]
+									"destination" : [ "obj-204", 0 ],
+									"midpoints" : [ 622.5, 484.021178999999961, 273.035339000000022, 484.021178999999961 ],
+									"source" : [ "obj-3", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-204", 0 ],
-									"midpoints" : [ 587.195679515600204, 483.521178999999961, 273.035339000000022, 483.521178999999961 ],
-									"source" : [ "obj-23", 0 ]
+									"destination" : [ "obj-3", 0 ],
+									"source" : [ "obj-30", 0 ]
 								}
 
 							}
@@ -922,16 +4790,24 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-70", 0 ],
-									"source" : [ "obj-68", 0 ]
+									"destination" : [ "obj-2", 0 ],
+									"source" : [ "obj-6", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-15", 0 ],
-									"midpoints" : [ 492.008179515600204, 349.268798999999944, 297.758179515600204, 349.268798999999944 ],
+									"midpoints" : [ 492.008179515600204, 353.268798999999944, 297.758179515600204, 353.268798999999944 ],
 									"source" : [ "obj-69", 2 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-17", 2 ],
+									"midpoints" : [ 513.258179515600204, 354.021178999999961, 585.5, 354.021178999999961 ],
+									"source" : [ "obj-69", 3 ]
 								}
 
 							}
@@ -945,17 +4821,9 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-22", 1 ],
-									"midpoints" : [ 470.758179515600204, 293.768798999999944, 807.195679515600204, 293.768798999999944 ],
+									"destination" : [ "obj-30", 2 ],
+									"midpoints" : [ 470.758179515600204, 386.021178999999961, 878.5, 386.021178999999961 ],
 									"source" : [ "obj-69", 1 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-68", 1 ],
-									"midpoints" : [ 513.258179515600204, 348.768798999999944, 569.008179515600204, 348.768798999999944 ],
-									"source" : [ "obj-69", 3 ]
 								}
 
 							}
@@ -966,17 +4834,2817 @@
 								}
 
 							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-67", 0 ],
-									"source" : [ "obj-70", 0 ]
-								}
+ ],
+						"styles" : [ 							{
+								"name" : "AudioStatus_Menu",
+								"default" : 								{
+									"bgfillcolor" : 									{
+										"type" : "color",
+										"color" : [ 0.294118, 0.313726, 0.337255, 1 ],
+										"color1" : [ 0.454902, 0.462745, 0.482353, 0.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
 
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "Audiomix",
+								"default" : 								{
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39
+									}
+
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "Jamoma_highlighted_orange",
+								"default" : 								{
+									"accentcolor" : [ 1.0, 0.5, 0.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "Max 12 Regular",
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "jpatcher001",
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "messageGreen-1",
+								"default" : 								{
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.165741, 0.364658, 0.14032, 0.74 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "messagegold",
+								"default" : 								{
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.764706, 0.592157, 0.101961, 0.74 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "newobjBlue-1",
+								"default" : 								{
+									"accentcolor" : [ 0.317647, 0.654902, 0.976471, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "newobjYellow-1",
+								"default" : 								{
+									"fontsize" : [ 12.059008 ],
+									"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-2-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-2-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-2-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-4-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-4-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-4-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-5",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-6",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-1-7",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-5",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-5-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-5-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-5-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-6",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-7",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-1-8",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-5",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-5-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-5-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-5-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-6",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-7",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-1-8",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-2-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-2-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-2-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-4-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-5",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-1",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-4",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-5",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-6-6",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-7",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-7-1",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-7-2",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-7-3",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-8",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-1-9",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-10",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-11",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-12",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-13",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-14",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-15",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-16",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-17",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-18",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-19",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-1",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-1-3",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-1-4",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-2",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-2-1",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-2-2",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-2-3",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-2-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-20",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-21",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-21-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-21-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-21-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-22",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-23",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-24",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-2-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-2-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-2-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-1-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-2",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-2-1",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-2-2",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-2-3",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-3",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-3-5",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-1",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-1-1-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-1-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-1-1-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-1-2",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-1-3",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-1-4",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-2",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-2-1",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-2-2",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-2-3",
+								"default" : 								{
+									"fontsize" : [ 11.0 ],
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-3",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-4-4",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-5",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"bgfillcolor" : 									{
+										"type" : "gradient",
+										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"color1" : [ 0.372549, 0.196078, 0.486275, 1.0 ],
+										"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+										"angle" : 270.0,
+										"proportion" : 0.39,
+										"autogradient" : 0
+									}
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-6",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-7",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-7-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-8",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-8-1",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "tatarism-9",
+								"default" : 								{
+									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
 							}
  ]
 					}
 ,
-					"patching_rect" : [ 459.3125, 595.712401999999997, 112.333333333333258, 23.0 ],
+					"patching_rect" : [ 459.3125, 606.712401999999997, 131.0, 23.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1682,7 +8350,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 36.0, 78.0, 753.0, 531.0 ],
+						"rect" : [ 36.0, 79.0, 359.0, 378.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1905,7 +8573,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 205.664429515600204, 135.537598000000003, 44.0, 23.0 ],
+									"patching_rect" : [ 72.157731115818024, 249.537598000000003, 44.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -1920,12 +8588,11 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-85",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 107.578859031200409, 100.0, 55.0, 23.0 ],
+									"patching_rect" : [ 165.664429515600204, 86.0, 84.0, 22.0 ],
 									"text" : "r #0-save"
 								}
 
@@ -1933,12 +8600,11 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-78",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 50.157731115818024, 100.0, 57.0, 23.0 ],
+									"patching_rect" : [ 77.157731115818024, 86.0, 83.0, 22.0 ],
 									"text" : "loadbang"
 								}
 
@@ -1946,12 +8612,11 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-76",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 130.664429515600204, 186.037598000000003, 57.0, 23.0 ],
+									"patching_rect" : [ 72.157731115818024, 167.037598000000003, 93.0, 22.0 ],
 									"text" : "r #0-done"
 								}
 
@@ -1959,12 +8624,11 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-73",
-									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 130.664429515600204, 213.756348000000003, 217.0, 23.0 ],
+									"patching_rect" : [ 72.157731115818024, 193.756348000000003, 248.0, 22.0 ],
 									"text" : "SOM training done. CLICK SAVE below..."
 								}
 
@@ -1972,12 +8636,11 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-64",
-									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 135.537598000000003, 152.328859031200409, 37.0 ],
+									"patching_rect" : [ 50.0, 135.537598000000003, 245.328859031200409, 22.0 ],
 									"text" : "Warning: This may take quite some time."
 								}
 
@@ -2004,7 +8667,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 85.00000051560022, 40.0, 30.0, 30.0 ]
+									"patching_rect" : [ 138.00000051560022, 40.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -2016,7 +8679,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 122.776276515600216, 296.756348000000003, 30.0, 30.0 ]
+									"patching_rect" : [ 50.0, 285.756348000000003, 30.0, 30.0 ]
 								}
 
 							}
@@ -2031,6 +8694,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-78", 0 ],
+									"midpoints" : [ 147.50000051560022, 77.5, 86.657731115818024, 77.5 ],
 									"source" : [ "obj-141", 0 ]
 								}
 
@@ -2038,6 +8702,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-148", 0 ],
+									"midpoints" : [ 81.657731115818024, 278.146973000000003, 59.5, 278.146973000000003 ],
 									"source" : [ "obj-180", 0 ]
 								}
 
@@ -2052,6 +8717,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-148", 0 ],
+									"midpoints" : [ 81.657731115818024, 222.256348000000003, 59.5, 222.256348000000003 ],
 									"source" : [ "obj-73", 0 ]
 								}
 
@@ -2066,6 +8732,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-64", 0 ],
+									"midpoints" : [ 86.657731115818024, 124.268799000000001, 59.5, 124.268799000000001 ],
 									"source" : [ "obj-78", 0 ]
 								}
 
@@ -2073,7 +8740,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-64", 0 ],
-									"midpoints" : [ 117.078859031200409, 128.268799000000001, 59.5, 128.268799000000001 ],
+									"midpoints" : [ 175.164429515600204, 128.268799000000001, 59.5, 128.268799000000001 ],
 									"source" : [ "obj-85", 0 ]
 								}
 
@@ -2794,8 +9461,8 @@
 , 							{
 								"name" : "newobjYellow-1",
 								"default" : 								{
-									"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
-									"fontsize" : [ 12.059008 ]
+									"fontsize" : [ 12.059008 ],
+									"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2804,13 +9471,13 @@
 , 							{
 								"name" : "tatarism",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2819,12 +9486,12 @@
 , 							{
 								"name" : "tatarism-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2833,12 +9500,11 @@
 , 							{
 								"name" : "tatarism-1-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -2848,7 +9514,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2857,12 +9524,12 @@
 , 							{
 								"name" : "tatarism-1-1-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2871,12 +9538,11 @@
 , 							{
 								"name" : "tatarism-1-1-1-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -2886,7 +9552,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2895,12 +9562,12 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2909,12 +9576,11 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-1-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -2924,7 +9590,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2933,12 +9600,12 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-1-1-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2947,12 +9614,12 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-1-1-1-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2961,12 +9628,12 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-1-1-1-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2975,12 +9642,12 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-1-1-1-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2989,12 +9656,12 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-1-1-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3003,12 +9670,11 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-1-1-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3018,7 +9684,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3027,12 +9694,11 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-1-1-4",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3042,7 +9708,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3051,12 +9718,11 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-1-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3066,7 +9732,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3075,12 +9742,11 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-1-2-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3090,7 +9756,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3099,12 +9766,11 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-1-2-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3114,7 +9780,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3123,12 +9790,11 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-1-2-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3138,7 +9804,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3147,12 +9814,12 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-1-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3161,12 +9828,12 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-1-4",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3175,12 +9842,12 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3189,12 +9856,12 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3203,12 +9870,12 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-4",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3217,12 +9884,12 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-4-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3231,12 +9898,12 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-4-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3245,12 +9912,12 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-4-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3259,12 +9926,12 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-5",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3273,12 +9940,11 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-6",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3288,7 +9954,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3297,12 +9964,11 @@
 , 							{
 								"name" : "tatarism-1-1-1-1-7",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3312,7 +9978,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3321,12 +9988,12 @@
 , 							{
 								"name" : "tatarism-1-1-1-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3335,12 +10002,11 @@
 , 							{
 								"name" : "tatarism-1-1-1-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3350,7 +10016,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3359,12 +10026,11 @@
 , 							{
 								"name" : "tatarism-1-1-1-4",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3374,7 +10040,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3383,12 +10050,11 @@
 , 							{
 								"name" : "tatarism-1-1-1-5",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3398,7 +10064,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3407,12 +10074,11 @@
 , 							{
 								"name" : "tatarism-1-1-1-5-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3422,7 +10088,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3431,12 +10098,11 @@
 , 							{
 								"name" : "tatarism-1-1-1-5-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3446,7 +10112,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3455,12 +10122,11 @@
 , 							{
 								"name" : "tatarism-1-1-1-5-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3470,7 +10136,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3479,12 +10146,11 @@
 , 							{
 								"name" : "tatarism-1-1-1-6",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3494,7 +10160,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3503,12 +10170,12 @@
 , 							{
 								"name" : "tatarism-1-1-1-7",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3517,12 +10184,12 @@
 , 							{
 								"name" : "tatarism-1-1-1-8",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3531,12 +10198,11 @@
 , 							{
 								"name" : "tatarism-1-1-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3546,7 +10212,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3555,12 +10222,12 @@
 , 							{
 								"name" : "tatarism-1-1-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3569,12 +10236,12 @@
 , 							{
 								"name" : "tatarism-1-1-4",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3583,12 +10250,12 @@
 , 							{
 								"name" : "tatarism-1-1-5",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3597,12 +10264,12 @@
 , 							{
 								"name" : "tatarism-1-1-5-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3611,12 +10278,12 @@
 , 							{
 								"name" : "tatarism-1-1-5-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3625,12 +10292,12 @@
 , 							{
 								"name" : "tatarism-1-1-5-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3639,12 +10306,12 @@
 , 							{
 								"name" : "tatarism-1-1-6",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3653,12 +10320,11 @@
 , 							{
 								"name" : "tatarism-1-1-7",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3668,7 +10334,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3677,12 +10344,11 @@
 , 							{
 								"name" : "tatarism-1-1-8",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3692,7 +10358,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3701,12 +10368,12 @@
 , 							{
 								"name" : "tatarism-1-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3715,12 +10382,12 @@
 , 							{
 								"name" : "tatarism-1-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3729,12 +10396,11 @@
 , 							{
 								"name" : "tatarism-1-4",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3744,7 +10410,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3753,12 +10420,12 @@
 , 							{
 								"name" : "tatarism-1-4-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3767,12 +10434,11 @@
 , 							{
 								"name" : "tatarism-1-4-1-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3782,7 +10448,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3791,12 +10458,11 @@
 , 							{
 								"name" : "tatarism-1-4-1-1-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3806,7 +10472,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3815,12 +10482,11 @@
 , 							{
 								"name" : "tatarism-1-4-1-1-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3830,7 +10496,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3839,12 +10506,11 @@
 , 							{
 								"name" : "tatarism-1-4-1-1-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3854,7 +10520,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3863,12 +10530,11 @@
 , 							{
 								"name" : "tatarism-1-4-1-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3878,7 +10544,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3887,12 +10554,12 @@
 , 							{
 								"name" : "tatarism-1-4-1-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3901,12 +10568,12 @@
 , 							{
 								"name" : "tatarism-1-4-1-4",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3915,12 +10582,12 @@
 , 							{
 								"name" : "tatarism-1-4-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3929,12 +10596,12 @@
 , 							{
 								"name" : "tatarism-1-4-2-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3943,12 +10610,12 @@
 , 							{
 								"name" : "tatarism-1-4-2-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3957,12 +10624,12 @@
 , 							{
 								"name" : "tatarism-1-4-2-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3971,12 +10638,11 @@
 , 							{
 								"name" : "tatarism-1-4-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3986,7 +10652,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3995,12 +10662,11 @@
 , 							{
 								"name" : "tatarism-1-4-4",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -4010,7 +10676,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4019,12 +10686,11 @@
 , 							{
 								"name" : "tatarism-1-5",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -4034,7 +10700,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4043,13 +10710,13 @@
 , 							{
 								"name" : "tatarism-1-6",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4058,13 +10725,13 @@
 , 							{
 								"name" : "tatarism-1-6-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4073,13 +10740,13 @@
 , 							{
 								"name" : "tatarism-1-6-1-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4088,13 +10755,13 @@
 , 							{
 								"name" : "tatarism-1-6-1-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4103,13 +10770,13 @@
 , 							{
 								"name" : "tatarism-1-6-1-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4118,13 +10785,13 @@
 , 							{
 								"name" : "tatarism-1-6-1-4",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4133,13 +10800,13 @@
 , 							{
 								"name" : "tatarism-1-6-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4148,13 +10815,13 @@
 , 							{
 								"name" : "tatarism-1-6-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4163,13 +10830,13 @@
 , 							{
 								"name" : "tatarism-1-6-4",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4178,13 +10845,13 @@
 , 							{
 								"name" : "tatarism-1-6-5",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4193,13 +10860,13 @@
 , 							{
 								"name" : "tatarism-1-6-6",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4208,13 +10875,13 @@
 , 							{
 								"name" : "tatarism-1-7",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4223,13 +10890,13 @@
 , 							{
 								"name" : "tatarism-1-7-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4238,13 +10905,13 @@
 , 							{
 								"name" : "tatarism-1-7-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4253,13 +10920,13 @@
 , 							{
 								"name" : "tatarism-1-7-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4268,12 +10935,12 @@
 , 							{
 								"name" : "tatarism-1-8",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4282,12 +10949,12 @@
 , 							{
 								"name" : "tatarism-1-9",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4296,12 +10963,12 @@
 , 							{
 								"name" : "tatarism-10",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4310,12 +10977,12 @@
 , 							{
 								"name" : "tatarism-11",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4324,12 +10991,12 @@
 , 							{
 								"name" : "tatarism-12",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4338,12 +11005,12 @@
 , 							{
 								"name" : "tatarism-13",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4352,12 +11019,12 @@
 , 							{
 								"name" : "tatarism-14",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4366,12 +11033,12 @@
 , 							{
 								"name" : "tatarism-15",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4380,12 +11047,12 @@
 , 							{
 								"name" : "tatarism-16",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4394,12 +11061,12 @@
 , 							{
 								"name" : "tatarism-17",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4408,12 +11075,12 @@
 , 							{
 								"name" : "tatarism-18",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4422,12 +11089,12 @@
 , 							{
 								"name" : "tatarism-19",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4436,12 +11103,12 @@
 , 							{
 								"name" : "tatarism-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4450,13 +11117,13 @@
 , 							{
 								"name" : "tatarism-2-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4465,12 +11132,12 @@
 , 							{
 								"name" : "tatarism-2-1-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4479,12 +11146,12 @@
 , 							{
 								"name" : "tatarism-2-1-1-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4493,12 +11160,12 @@
 , 							{
 								"name" : "tatarism-2-1-1-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4507,12 +11174,12 @@
 , 							{
 								"name" : "tatarism-2-1-1-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4521,12 +11188,12 @@
 , 							{
 								"name" : "tatarism-2-1-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4535,13 +11202,13 @@
 , 							{
 								"name" : "tatarism-2-1-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4550,13 +11217,13 @@
 , 							{
 								"name" : "tatarism-2-1-4",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4565,13 +11232,13 @@
 , 							{
 								"name" : "tatarism-2-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4580,13 +11247,13 @@
 , 							{
 								"name" : "tatarism-2-2-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4595,13 +11262,13 @@
 , 							{
 								"name" : "tatarism-2-2-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4610,13 +11277,13 @@
 , 							{
 								"name" : "tatarism-2-2-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4625,12 +11292,12 @@
 , 							{
 								"name" : "tatarism-2-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4639,12 +11306,12 @@
 , 							{
 								"name" : "tatarism-2-4",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4653,12 +11320,12 @@
 , 							{
 								"name" : "tatarism-20",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4667,12 +11334,12 @@
 , 							{
 								"name" : "tatarism-21",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4681,12 +11348,12 @@
 , 							{
 								"name" : "tatarism-21-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4695,12 +11362,12 @@
 , 							{
 								"name" : "tatarism-21-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4709,12 +11376,12 @@
 , 							{
 								"name" : "tatarism-21-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4723,12 +11390,12 @@
 , 							{
 								"name" : "tatarism-22",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4737,13 +11404,13 @@
 , 							{
 								"name" : "tatarism-23",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4752,13 +11419,13 @@
 , 							{
 								"name" : "tatarism-24",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4767,12 +11434,12 @@
 , 							{
 								"name" : "tatarism-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4781,12 +11448,11 @@
 , 							{
 								"name" : "tatarism-3-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -4796,7 +11462,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4805,12 +11472,12 @@
 , 							{
 								"name" : "tatarism-3-1-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4819,12 +11486,11 @@
 , 							{
 								"name" : "tatarism-3-1-1-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -4834,7 +11500,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4843,12 +11510,11 @@
 , 							{
 								"name" : "tatarism-3-1-1-1-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -4858,7 +11524,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4867,12 +11534,11 @@
 , 							{
 								"name" : "tatarism-3-1-1-1-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -4882,7 +11548,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4891,12 +11558,11 @@
 , 							{
 								"name" : "tatarism-3-1-1-1-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -4906,7 +11572,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4915,12 +11582,11 @@
 , 							{
 								"name" : "tatarism-3-1-1-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -4930,7 +11596,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4939,12 +11606,12 @@
 , 							{
 								"name" : "tatarism-3-1-1-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4953,12 +11620,12 @@
 , 							{
 								"name" : "tatarism-3-1-1-4",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4967,12 +11634,12 @@
 , 							{
 								"name" : "tatarism-3-1-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4981,12 +11648,12 @@
 , 							{
 								"name" : "tatarism-3-1-2-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4995,12 +11662,12 @@
 , 							{
 								"name" : "tatarism-3-1-2-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5009,12 +11676,12 @@
 , 							{
 								"name" : "tatarism-3-1-2-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5023,12 +11690,11 @@
 , 							{
 								"name" : "tatarism-3-1-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -5038,7 +11704,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5047,12 +11714,11 @@
 , 							{
 								"name" : "tatarism-3-1-4",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -5062,7 +11728,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5071,13 +11738,13 @@
 , 							{
 								"name" : "tatarism-3-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5086,13 +11753,13 @@
 , 							{
 								"name" : "tatarism-3-2-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5101,13 +11768,13 @@
 , 							{
 								"name" : "tatarism-3-2-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5116,13 +11783,13 @@
 , 							{
 								"name" : "tatarism-3-2-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5131,13 +11798,13 @@
 , 							{
 								"name" : "tatarism-3-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5146,12 +11813,12 @@
 , 							{
 								"name" : "tatarism-3-4",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5160,12 +11827,12 @@
 , 							{
 								"name" : "tatarism-3-5",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5174,12 +11841,12 @@
 , 							{
 								"name" : "tatarism-4",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5188,13 +11855,13 @@
 , 							{
 								"name" : "tatarism-4-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5203,12 +11870,12 @@
 , 							{
 								"name" : "tatarism-4-1-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5217,12 +11884,12 @@
 , 							{
 								"name" : "tatarism-4-1-1-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5231,12 +11898,12 @@
 , 							{
 								"name" : "tatarism-4-1-1-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5245,12 +11912,12 @@
 , 							{
 								"name" : "tatarism-4-1-1-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5259,12 +11926,12 @@
 , 							{
 								"name" : "tatarism-4-1-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5273,13 +11940,13 @@
 , 							{
 								"name" : "tatarism-4-1-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5288,13 +11955,13 @@
 , 							{
 								"name" : "tatarism-4-1-4",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5303,13 +11970,13 @@
 , 							{
 								"name" : "tatarism-4-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5318,13 +11985,13 @@
 , 							{
 								"name" : "tatarism-4-2-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5333,13 +12000,13 @@
 , 							{
 								"name" : "tatarism-4-2-2",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5348,13 +12015,13 @@
 , 							{
 								"name" : "tatarism-4-2-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"fontsize" : [ 11.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"fontsize" : [ 11.0 ]
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5363,12 +12030,12 @@
 , 							{
 								"name" : "tatarism-4-3",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5377,12 +12044,12 @@
 , 							{
 								"name" : "tatarism-4-4",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5391,12 +12058,11 @@
 , 							{
 								"name" : "tatarism-5",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -5406,7 +12072,8 @@
 										"proportion" : 0.39,
 										"autogradient" : 0
 									}
-
+,
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5415,12 +12082,12 @@
 , 							{
 								"name" : "tatarism-6",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5429,12 +12096,12 @@
 , 							{
 								"name" : "tatarism-7",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5443,13 +12110,13 @@
 , 							{
 								"name" : "tatarism-7-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5458,12 +12125,12 @@
 , 							{
 								"name" : "tatarism-8",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5472,13 +12139,13 @@
 , 							{
 								"name" : "tatarism-8-1",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
 									"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5487,12 +12154,12 @@
 , 							{
 								"name" : "tatarism-9",
 								"default" : 								{
-									"fontname" : [ "Futura Medium" ],
-									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Futura Medium" ],
+									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 									"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -6669,7 +13336,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 45.96875, 312.0, 77.0, 23.0 ],
+					"patching_rect" : [ 45.96875, 312.0, 62.0, 23.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 446.022705078125, 119.0, 77.0, 23.0 ],
 					"saved_object_attributes" : 					{
@@ -6955,7 +13622,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 582.0, 732.5, 193.0, 19.0 ],
+					"patching_rect" : [ 615.476929515600204, 703.0, 193.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 37.125, 432.606201000000056, 252.0, 19.0 ],
 					"text" : "5. Save stats and SOM nodes",
@@ -6971,9 +13638,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 492.0, 732.5, 88.0, 22.0 ],
+					"patching_rect" : [ 824.0, 741.0, 43.976929515600204, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 111.625, 476.712401999999997, 41.0, 22.0 ],
+					"presentation_rect" : [ 107.625, 476.712401999999997, 41.0, 22.0 ],
 					"text" : "SAVE",
 					"textcolor" : [ 0.070588235294118, 0.070588235294118, 0.070588235294118, 1.0 ]
 				}
@@ -7042,7 +13709,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.96875, 625.712401999999997, 150.0, 21.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 22.125, 275.893799000000058, 263.0, 21.0 ]
+					"presentation_rect" : [ 22.125, 278.893799000000058, 263.0, 21.0 ]
 				}
 
 			}
@@ -7061,7 +13728,6 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-183",
-					"linecount" : 3,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
 					"numoutlets" : 4,
@@ -7069,9 +13735,8 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 15.96875, 493.287598000000003, 267.0, 49.5 ],
 					"presentation" : 1,
-					"presentation_linecount" : 4,
-					"presentation_rect" : [ 20.125, 209.893799000000058, 263.0, 64.0 ],
-					"text" : "1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1."
+					"presentation_rect" : [ 29.125, 206.28759765625, 249.0, 70.606201343750058 ],
+					"text" : "1."
 				}
 
 			}
@@ -7118,7 +13783,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 15.96875, 373.424804000000051, 267.0, 91.787598000000003 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 20.125, 116.106201000000056, 263.0, 91.787598000000003 ],
+					"presentation_rect" : [ 31.125, 116.106201000000056, 244.0, 83.787598000000003 ],
 					"setminmax" : [ 0.0, 1.0 ]
 				}
 
@@ -7130,7 +13795,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
-					"patching_rect" : [ 704.976929515600204, 510.712401999999997, 38.5, 23.0 ],
+					"patching_rect" : [ 698.976929515600204, 502.712401999999997, 44.5, 23.0 ],
 					"text" : "t i i"
 				}
 
@@ -7142,7 +13807,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 553.976929515600204, 340.5, 94.0, 23.0 ],
+					"patching_rect" : [ 571.1875, 340.5, 94.0, 23.0 ],
 					"text" : "r #0-start/stop"
 				}
 
@@ -7154,7 +13819,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 663.976929515600204, 510.712401999999997, 37.0, 23.0 ],
+					"patching_rect" : [ 659.976929515600204, 502.712401999999997, 37.0, 23.0 ],
 					"text" : "zl.len"
 				}
 
@@ -7166,7 +13831,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 459.3125, 442.212401999999997, 29.5, 23.0 ],
+					"patching_rect" : [ 459.3125, 437.212401999999997, 29.5, 23.0 ],
 					"text" : "t l l"
 				}
 
@@ -7178,7 +13843,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 498.3125, 380.0, 52.0, 23.0 ],
+					"patching_rect" : [ 498.3125, 380.0, 70.875, 23.0 ],
 					"text" : "gate 1 1"
 				}
 
@@ -7190,7 +13855,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 546.976929515600204, 510.712401999999997, 115.0, 23.0 ],
+					"patching_rect" : [ 543.476929515600204, 502.712401999999997, 115.0, 23.0 ],
 					"text" : "r #0-som-messages"
 				}
 
@@ -7274,7 +13939,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 459.3125, 510.712401999999997, 82.0, 23.0 ],
+					"patching_rect" : [ 459.3125, 502.712401999999997, 82.0, 23.0 ],
 					"text" : "vexpr $f1*$f2"
 				}
 
@@ -7286,7 +13951,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 459.3125, 480.287598000000003, 109.875, 23.0 ],
+					"patching_rect" : [ 459.3125, 475.287598000000003, 109.875, 23.0 ],
 					"text" : "vexpr ($f1-$f2)/$f3"
 				}
 
@@ -7299,7 +13964,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 423.3125, 340.5, 118.0, 23.0 ],
+					"patching_rect" : [ 423.3125, 340.5, 145.875, 23.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 402.0426025390625, 448.212401999999997, 118.0, 23.0 ],
 					"saved_object_attributes" : 					{
@@ -7319,7 +13984,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 452.75, 655.042358000000036, 123.0, 23.0 ],
+					"patching_rect" : [ 452.75, 655.042358000000036, 108.0, 23.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 402.042967945337296, 499.28759765625, 148.999634593725204, 23.0 ],
 					"saved_object_attributes" : 					{
@@ -7352,7 +14017,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 459.3125, 547.712401999999997, 131.0, 23.0 ],
+					"patching_rect" : [ 459.3125, 563.712401999999997, 153.400000000000091, 23.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 402.0426025390625, 472.712401999999997, 149.0, 23.0 ],
 					"text" : "ml.som 32 10 0.25 0. 2"
@@ -7410,9 +14075,9 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 463.75, 693.0, 101.0, 98.0 ],
+					"patching_rect" : [ 794.5, 703.0, 101.0, 98.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 85.8125, 454.712401999999997, 92.625, 66.0 ],
+					"presentation_rect" : [ 81.8125, 454.712401999999997, 92.625, 66.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "off", "on" ],
@@ -7433,12 +14098,29 @@
 					"angle" : 270.0,
 					"background" : 1,
 					"bgcolor" : [ 0.737254901960784, 0.737254901960784, 0.737254901960784, 1.0 ],
+					"id" : "obj-24",
+					"maxclass" : "panel",
+					"mode" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1264.984375, 751.207641999999964, 61.96875, 48.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 13.0625, 539.128296156250144, 569.0, 69.0 ],
+					"proportion" : 0.5
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"angle" : 270.0,
+					"background" : 1,
+					"bgcolor" : [ 0.737254901960784, 0.737254901960784, 0.737254901960784, 1.0 ],
 					"id" : "obj-212",
 					"maxclass" : "panel",
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.96875, 715.0, 56.46875, 43.0 ],
+					"patching_rect" : [ 1259.96875, 747.957641999999964, 56.46875, 43.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 301.0625, 157.28759765625, 281.0, 158.0 ],
 					"proportion" : 0.5
@@ -7455,7 +14137,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.984375, 715.0, 61.96875, 48.0 ],
+					"patching_rect" : [ 1264.984375, 747.957641999999964, 61.96875, 48.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 13.0625, 420.5, 569.0, 111.0 ],
 					"proportion" : 0.5
@@ -7472,7 +14154,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.984375, 715.0, 61.96875, 48.0 ],
+					"patching_rect" : [ 1264.984375, 747.957641999999964, 61.96875, 48.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 13.0625, 320.5, 569.0, 93.0 ],
 					"proportion" : 0.5
@@ -7489,7 +14171,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.984375, 715.0, 69.984375000000014, 54.5 ],
+					"patching_rect" : [ 1264.984375, 747.957641999999964, 69.984375000000014, 54.5 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 301.0625, 42.5, 281.0, 108.0 ],
 					"proportion" : 0.5
@@ -7506,7 +14188,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.96875, 715.0, 75.000000000000014, 54.5 ],
+					"patching_rect" : [ 1259.96875, 747.957641999999964, 75.000000000000014, 54.5 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 13.0, 42.5, 281.0, 272.0 ],
 					"proportion" : 0.5
@@ -7523,9 +14205,9 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.96875, 670.042358000000036, 56.46875, 38.0 ],
+					"patching_rect" : [ 1259.96875, 703.0, 56.46875, 38.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 4.5625, 3.553100500000085, 586.0, 538.575195656249889 ],
+					"presentation_rect" : [ 4.5625, 3.553100500000085, 586.0, 611.575195656249889 ],
 					"proportion" : 0.5
 				}
 
@@ -7535,6 +14217,21 @@
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 1 ],
+					"midpoints" : [ 479.3125, 555.356201000000056, 687.476929515600204, 555.356201000000056 ],
+					"source" : [ "obj-10", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
@@ -7588,7 +14285,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-150", 0 ],
-					"midpoints" : [ 479.3125, 468.75, 673.476929515600204, 468.75 ],
+					"midpoints" : [ 479.3125, 464.75, 669.476929515600204, 464.75 ],
 					"source" : [ "obj-109", 1 ]
 				}
 
@@ -7701,7 +14398,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"midpoints" : [ 556.476929515600204, 539.212401999999997, 468.8125, 539.212401999999997 ],
+					"midpoints" : [ 552.976929515600204, 559.212401999999997, 468.8125, 559.212401999999997 ],
 					"source" : [ "obj-135", 0 ]
 				}
 
@@ -7766,7 +14463,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-206", 2 ],
-					"midpoints" : [ 673.476929515600204, 581.712401999999997, 506.145833333333314, 581.712401999999997 ],
+					"midpoints" : [ 669.476929515600204, 595.712401999999997, 513.612499999999955, 595.712401999999997 ],
 					"source" : [ "obj-150", 0 ]
 				}
 
@@ -7802,7 +14499,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-25", 0 ],
-					"midpoints" : [ 563.476929515600204, 369.356201000000056, 507.8125, 369.356201000000056 ],
+					"midpoints" : [ 580.6875, 369.356201000000056, 507.8125, 369.356201000000056 ],
 					"source" : [ "obj-160", 0 ]
 				}
 
@@ -7823,8 +14520,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"midpoints" : [ 115.125, 739.811157000000094, 40.96875, 739.811157000000094 ],
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-206", 0 ],
-					"midpoints" : [ 714.476929515600204, 585.712401999999997, 468.8125, 585.712401999999997 ],
+					"midpoints" : [ 708.476929515600204, 599.712401999999997, 468.8125, 599.712401999999997 ],
 					"source" : [ "obj-172", 0 ]
 				}
 
@@ -7847,6 +14552,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-183", 0 ],
 					"source" : [ "obj-184", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-35", 0 ],
+					"midpoints" : [ 40.96875, 814.042358000000149, 132.109375, 814.042358000000149, 132.109375, 745.579956000000152, 148.25, 745.579956000000152 ],
+					"source" : [ "obj-19", 0 ]
 				}
 
 			}
@@ -7905,7 +14618,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"midpoints" : [ 468.8125, 627.0, 451.8125, 627.0, 451.8125, 536.712401999999997, 468.8125, 536.712401999999997 ],
+					"midpoints" : [ 468.8125, 635.0, 451.8125, 635.0, 451.8125, 558.712401999999997, 468.8125, 558.712401999999997 ],
 					"source" : [ "obj-206", 0 ]
 				}
 
@@ -7913,8 +14626,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-77", 0 ],
-					"midpoints" : [ 562.145833333333258, 636.377380000000016, 462.25, 636.377380000000016 ],
+					"midpoints" : [ 580.8125, 636.377380000000016, 462.25, 636.377380000000016 ],
 					"source" : [ "obj-206", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"source" : [ "obj-21", 0 ]
 				}
 
 			}
@@ -7922,6 +14642,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-145", 0 ],
 					"source" : [ "obj-219", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-19", 0 ],
+					"source" : [ "obj-22", 0 ]
 				}
 
 			}
@@ -7944,7 +14671,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-206", 4 ],
-					"midpoints" : [ 473.25, 812.537598000000003, 579.22804809113336, 812.537598000000003, 579.22804809113336, 589.712401999999997, 543.479166666666629, 589.712401999999997 ],
+					"midpoints" : [ 804.0, 812.537598000000003, 594.22804809113336, 812.537598000000003, 594.22804809113336, 603.712401999999997, 558.412500000000023, 603.712401999999997 ],
 					"source" : [ "obj-27", 0 ]
 				}
 
@@ -7953,6 +14680,21 @@
 				"patchline" : 				{
 					"destination" : [ "obj-44", 0 ],
 					"source" : [ "obj-33", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-117", 0 ],
+					"source" : [ "obj-35", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-36", 0 ],
+					"midpoints" : [ 148.25, 780.311157000000094, 148.25, 780.311157000000094 ],
+					"source" : [ "obj-35", 0 ]
 				}
 
 			}
@@ -7976,7 +14718,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-172", 0 ],
-					"midpoints" : [ 465.8125, 373.212401999999997, 714.476929515600204, 373.212401999999997 ],
+					"midpoints" : [ 475.104166666666686, 373.212401999999997, 708.476929515600204, 373.212401999999997 ],
 					"source" : [ "obj-4", 1 ]
 				}
 
@@ -7998,7 +14740,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-49", 1 ],
-					"midpoints" : [ 65.96875, 270.0, 383.0, 270.0, 383.0, 476.0, 514.25, 476.0 ],
+					"midpoints" : [ 65.96875, 270.0, 383.0, 270.0, 383.0, 472.0, 514.25, 472.0 ],
 					"source" : [ "obj-42", 1 ]
 				}
 
@@ -8028,7 +14770,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-49", 2 ],
-					"midpoints" : [ 98.625, 266.0, 388.0, 266.0, 388.0, 472.0, 559.6875, 472.0 ],
+					"midpoints" : [ 98.625, 266.0, 388.0, 266.0, 388.0, 468.0, 559.6875, 468.0 ],
 					"source" : [ "obj-46", 1 ]
 				}
 
@@ -8072,7 +14814,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-90", 1 ],
-					"midpoints" : [ 25.46875, 611.0, 420.640625, 611.0, 420.640625, 506.712401999999997, 531.8125, 506.712401999999997 ],
+					"midpoints" : [ 25.46875, 611.0, 420.640625, 611.0, 420.640625, 500.712401999999997, 531.8125, 500.712401999999997 ],
 					"source" : [ "obj-6", 0 ]
 				}
 
@@ -8112,7 +14854,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-206", 5 ],
-					"midpoints" : [ 366.46875, 577.856201000000056, 562.145833333333258, 577.856201000000056 ],
+					"midpoints" : [ 366.46875, 591.856201000000056, 580.8125, 591.856201000000056 ],
 					"source" : [ "obj-61", 4 ]
 				}
 
@@ -8142,7 +14884,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-206", 1 ],
-					"midpoints" : [ 432.8125, 590.606201000000056, 487.479166666666629, 590.606201000000056 ],
+					"midpoints" : [ 432.8125, 603.606201000000056, 491.212499999999977, 603.606201000000056 ],
 					"source" : [ "obj-66", 0 ]
 				}
 
@@ -8262,7 +15004,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
+					"destination" : [ "obj-10", 0 ],
 					"source" : [ "obj-90", 0 ]
 				}
 
@@ -8284,6 +15026,7 @@
  ],
 		"parameters" : 		{
 			"obj-100" : [ "live.text[13]", "live.text", 0 ],
+			"obj-22" : [ "live.text[15]", "live.text", 0 ],
 			"obj-27" : [ "live.button[2]", "live.button", 0 ],
 			"obj-50" : [ "number[1]", "number[1]", 0 ],
 			"obj-63" : [ "number[2]", "number[2]", 0 ],
@@ -8320,6 +15063,10 @@
 			}
 , 			{
 				"name" : "fluid.buf2list.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "zsa.dist.mxo",
 				"type" : "iLaX"
 			}
  ],
@@ -8426,8 +15173,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
-					"fontsize" : [ 12.059008 ]
+					"fontsize" : [ 12.059008 ],
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8436,13 +15183,13 @@
 , 			{
 				"name" : "tatarism",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8451,12 +15198,12 @@
 , 			{
 				"name" : "tatarism-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8465,12 +15212,11 @@
 , 			{
 				"name" : "tatarism-1-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -8480,7 +15226,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8489,12 +15236,12 @@
 , 			{
 				"name" : "tatarism-1-1-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8503,12 +15250,11 @@
 , 			{
 				"name" : "tatarism-1-1-1-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -8518,7 +15264,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8527,12 +15274,12 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8541,12 +15288,11 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-1-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -8556,7 +15302,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8565,12 +15312,12 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-1-1-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8579,12 +15326,12 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-1-1-1-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8593,12 +15340,12 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-1-1-1-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8607,12 +15354,12 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-1-1-1-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8621,12 +15368,12 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-1-1-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8635,12 +15382,11 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-1-1-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -8650,7 +15396,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8659,12 +15406,11 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-1-1-4",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -8674,7 +15420,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8683,12 +15430,11 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-1-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -8698,7 +15444,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8707,12 +15454,11 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-1-2-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -8722,7 +15468,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8731,12 +15478,11 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-1-2-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -8746,7 +15492,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8755,12 +15502,11 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-1-2-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -8770,7 +15516,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8779,12 +15526,12 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-1-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8793,12 +15540,12 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-1-4",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8807,12 +15554,12 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8821,12 +15568,12 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8835,12 +15582,12 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-4",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8849,12 +15596,12 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-4-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8863,12 +15610,12 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-4-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8877,12 +15624,12 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-4-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8891,12 +15638,12 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-5",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8905,12 +15652,11 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-6",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -8920,7 +15666,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8929,12 +15676,11 @@
 , 			{
 				"name" : "tatarism-1-1-1-1-7",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -8944,7 +15690,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8953,12 +15700,12 @@
 , 			{
 				"name" : "tatarism-1-1-1-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8967,12 +15714,11 @@
 , 			{
 				"name" : "tatarism-1-1-1-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -8982,7 +15728,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -8991,12 +15738,11 @@
 , 			{
 				"name" : "tatarism-1-1-1-4",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -9006,7 +15752,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9015,12 +15762,11 @@
 , 			{
 				"name" : "tatarism-1-1-1-5",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -9030,7 +15776,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9039,12 +15786,11 @@
 , 			{
 				"name" : "tatarism-1-1-1-5-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -9054,7 +15800,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9063,12 +15810,11 @@
 , 			{
 				"name" : "tatarism-1-1-1-5-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -9078,7 +15824,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9087,12 +15834,11 @@
 , 			{
 				"name" : "tatarism-1-1-1-5-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -9102,7 +15848,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9111,12 +15858,11 @@
 , 			{
 				"name" : "tatarism-1-1-1-6",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -9126,7 +15872,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9135,12 +15882,12 @@
 , 			{
 				"name" : "tatarism-1-1-1-7",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9149,12 +15896,12 @@
 , 			{
 				"name" : "tatarism-1-1-1-8",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9163,12 +15910,11 @@
 , 			{
 				"name" : "tatarism-1-1-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -9178,7 +15924,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9187,12 +15934,12 @@
 , 			{
 				"name" : "tatarism-1-1-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9201,12 +15948,12 @@
 , 			{
 				"name" : "tatarism-1-1-4",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9215,12 +15962,12 @@
 , 			{
 				"name" : "tatarism-1-1-5",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9229,12 +15976,12 @@
 , 			{
 				"name" : "tatarism-1-1-5-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9243,12 +15990,12 @@
 , 			{
 				"name" : "tatarism-1-1-5-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9257,12 +16004,12 @@
 , 			{
 				"name" : "tatarism-1-1-5-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9271,12 +16018,12 @@
 , 			{
 				"name" : "tatarism-1-1-6",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9285,12 +16032,11 @@
 , 			{
 				"name" : "tatarism-1-1-7",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -9300,7 +16046,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9309,12 +16056,11 @@
 , 			{
 				"name" : "tatarism-1-1-8",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -9324,7 +16070,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9333,12 +16080,12 @@
 , 			{
 				"name" : "tatarism-1-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9347,12 +16094,12 @@
 , 			{
 				"name" : "tatarism-1-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9361,12 +16108,11 @@
 , 			{
 				"name" : "tatarism-1-4",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -9376,7 +16122,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9385,12 +16132,12 @@
 , 			{
 				"name" : "tatarism-1-4-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9399,12 +16146,11 @@
 , 			{
 				"name" : "tatarism-1-4-1-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -9414,7 +16160,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9423,12 +16170,11 @@
 , 			{
 				"name" : "tatarism-1-4-1-1-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -9438,7 +16184,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9447,12 +16194,11 @@
 , 			{
 				"name" : "tatarism-1-4-1-1-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -9462,7 +16208,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9471,12 +16218,11 @@
 , 			{
 				"name" : "tatarism-1-4-1-1-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -9486,7 +16232,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9495,12 +16242,11 @@
 , 			{
 				"name" : "tatarism-1-4-1-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -9510,7 +16256,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9519,12 +16266,12 @@
 , 			{
 				"name" : "tatarism-1-4-1-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9533,12 +16280,12 @@
 , 			{
 				"name" : "tatarism-1-4-1-4",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9547,12 +16294,12 @@
 , 			{
 				"name" : "tatarism-1-4-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9561,12 +16308,12 @@
 , 			{
 				"name" : "tatarism-1-4-2-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9575,12 +16322,12 @@
 , 			{
 				"name" : "tatarism-1-4-2-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9589,12 +16336,12 @@
 , 			{
 				"name" : "tatarism-1-4-2-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9603,12 +16350,11 @@
 , 			{
 				"name" : "tatarism-1-4-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -9618,7 +16364,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9627,12 +16374,11 @@
 , 			{
 				"name" : "tatarism-1-4-4",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -9642,7 +16388,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9651,12 +16398,11 @@
 , 			{
 				"name" : "tatarism-1-5",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -9666,7 +16412,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9675,13 +16422,13 @@
 , 			{
 				"name" : "tatarism-1-6",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9690,13 +16437,13 @@
 , 			{
 				"name" : "tatarism-1-6-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9705,13 +16452,13 @@
 , 			{
 				"name" : "tatarism-1-6-1-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9720,13 +16467,13 @@
 , 			{
 				"name" : "tatarism-1-6-1-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9735,13 +16482,13 @@
 , 			{
 				"name" : "tatarism-1-6-1-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9750,13 +16497,13 @@
 , 			{
 				"name" : "tatarism-1-6-1-4",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9765,13 +16512,13 @@
 , 			{
 				"name" : "tatarism-1-6-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9780,13 +16527,13 @@
 , 			{
 				"name" : "tatarism-1-6-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9795,13 +16542,13 @@
 , 			{
 				"name" : "tatarism-1-6-4",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9810,13 +16557,13 @@
 , 			{
 				"name" : "tatarism-1-6-5",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9825,13 +16572,13 @@
 , 			{
 				"name" : "tatarism-1-6-6",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9840,13 +16587,13 @@
 , 			{
 				"name" : "tatarism-1-7",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9855,13 +16602,13 @@
 , 			{
 				"name" : "tatarism-1-7-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9870,13 +16617,13 @@
 , 			{
 				"name" : "tatarism-1-7-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9885,13 +16632,13 @@
 , 			{
 				"name" : "tatarism-1-7-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9900,12 +16647,12 @@
 , 			{
 				"name" : "tatarism-1-8",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9914,12 +16661,12 @@
 , 			{
 				"name" : "tatarism-1-9",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9928,12 +16675,12 @@
 , 			{
 				"name" : "tatarism-10",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9942,12 +16689,12 @@
 , 			{
 				"name" : "tatarism-11",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9956,12 +16703,12 @@
 , 			{
 				"name" : "tatarism-12",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9970,12 +16717,12 @@
 , 			{
 				"name" : "tatarism-13",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9984,12 +16731,12 @@
 , 			{
 				"name" : "tatarism-14",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -9998,12 +16745,12 @@
 , 			{
 				"name" : "tatarism-15",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10012,12 +16759,12 @@
 , 			{
 				"name" : "tatarism-16",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10026,12 +16773,12 @@
 , 			{
 				"name" : "tatarism-17",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10040,12 +16787,12 @@
 , 			{
 				"name" : "tatarism-18",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10054,12 +16801,12 @@
 , 			{
 				"name" : "tatarism-19",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10068,12 +16815,12 @@
 , 			{
 				"name" : "tatarism-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10082,13 +16829,13 @@
 , 			{
 				"name" : "tatarism-2-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10097,12 +16844,12 @@
 , 			{
 				"name" : "tatarism-2-1-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10111,12 +16858,12 @@
 , 			{
 				"name" : "tatarism-2-1-1-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10125,12 +16872,12 @@
 , 			{
 				"name" : "tatarism-2-1-1-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10139,12 +16886,12 @@
 , 			{
 				"name" : "tatarism-2-1-1-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10153,12 +16900,12 @@
 , 			{
 				"name" : "tatarism-2-1-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10167,13 +16914,13 @@
 , 			{
 				"name" : "tatarism-2-1-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10182,13 +16929,13 @@
 , 			{
 				"name" : "tatarism-2-1-4",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10197,13 +16944,13 @@
 , 			{
 				"name" : "tatarism-2-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10212,13 +16959,13 @@
 , 			{
 				"name" : "tatarism-2-2-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10227,13 +16974,13 @@
 , 			{
 				"name" : "tatarism-2-2-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10242,13 +16989,13 @@
 , 			{
 				"name" : "tatarism-2-2-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10257,12 +17004,12 @@
 , 			{
 				"name" : "tatarism-2-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10271,12 +17018,12 @@
 , 			{
 				"name" : "tatarism-2-4",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10285,12 +17032,12 @@
 , 			{
 				"name" : "tatarism-20",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10299,12 +17046,12 @@
 , 			{
 				"name" : "tatarism-21",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10313,12 +17060,12 @@
 , 			{
 				"name" : "tatarism-21-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10327,12 +17074,12 @@
 , 			{
 				"name" : "tatarism-21-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10341,12 +17088,12 @@
 , 			{
 				"name" : "tatarism-21-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10355,12 +17102,12 @@
 , 			{
 				"name" : "tatarism-22",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10369,13 +17116,13 @@
 , 			{
 				"name" : "tatarism-23",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10384,13 +17131,13 @@
 , 			{
 				"name" : "tatarism-24",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10399,12 +17146,12 @@
 , 			{
 				"name" : "tatarism-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10413,12 +17160,11 @@
 , 			{
 				"name" : "tatarism-3-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -10428,7 +17174,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10437,12 +17184,12 @@
 , 			{
 				"name" : "tatarism-3-1-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10451,12 +17198,11 @@
 , 			{
 				"name" : "tatarism-3-1-1-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -10466,7 +17212,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10475,12 +17222,11 @@
 , 			{
 				"name" : "tatarism-3-1-1-1-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -10490,7 +17236,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10499,12 +17246,11 @@
 , 			{
 				"name" : "tatarism-3-1-1-1-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -10514,7 +17260,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10523,12 +17270,11 @@
 , 			{
 				"name" : "tatarism-3-1-1-1-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -10538,7 +17284,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10547,12 +17294,11 @@
 , 			{
 				"name" : "tatarism-3-1-1-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -10562,7 +17308,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10571,12 +17318,12 @@
 , 			{
 				"name" : "tatarism-3-1-1-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10585,12 +17332,12 @@
 , 			{
 				"name" : "tatarism-3-1-1-4",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10599,12 +17346,12 @@
 , 			{
 				"name" : "tatarism-3-1-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10613,12 +17360,12 @@
 , 			{
 				"name" : "tatarism-3-1-2-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10627,12 +17374,12 @@
 , 			{
 				"name" : "tatarism-3-1-2-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10641,12 +17388,12 @@
 , 			{
 				"name" : "tatarism-3-1-2-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10655,12 +17402,11 @@
 , 			{
 				"name" : "tatarism-3-1-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -10670,7 +17416,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10679,12 +17426,11 @@
 , 			{
 				"name" : "tatarism-3-1-4",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -10694,7 +17440,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10703,13 +17450,13 @@
 , 			{
 				"name" : "tatarism-3-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10718,13 +17465,13 @@
 , 			{
 				"name" : "tatarism-3-2-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10733,13 +17480,13 @@
 , 			{
 				"name" : "tatarism-3-2-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10748,13 +17495,13 @@
 , 			{
 				"name" : "tatarism-3-2-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10763,13 +17510,13 @@
 , 			{
 				"name" : "tatarism-3-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10778,12 +17525,12 @@
 , 			{
 				"name" : "tatarism-3-4",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10792,12 +17539,12 @@
 , 			{
 				"name" : "tatarism-3-5",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10806,12 +17553,12 @@
 , 			{
 				"name" : "tatarism-4",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10820,13 +17567,13 @@
 , 			{
 				"name" : "tatarism-4-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10835,12 +17582,12 @@
 , 			{
 				"name" : "tatarism-4-1-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10849,12 +17596,12 @@
 , 			{
 				"name" : "tatarism-4-1-1-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10863,12 +17610,12 @@
 , 			{
 				"name" : "tatarism-4-1-1-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10877,12 +17624,12 @@
 , 			{
 				"name" : "tatarism-4-1-1-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10891,12 +17638,12 @@
 , 			{
 				"name" : "tatarism-4-1-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10905,13 +17652,13 @@
 , 			{
 				"name" : "tatarism-4-1-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10920,13 +17667,13 @@
 , 			{
 				"name" : "tatarism-4-1-4",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10935,13 +17682,13 @@
 , 			{
 				"name" : "tatarism-4-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10950,13 +17697,13 @@
 , 			{
 				"name" : "tatarism-4-2-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10965,13 +17712,13 @@
 , 			{
 				"name" : "tatarism-4-2-2",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10980,13 +17727,13 @@
 , 			{
 				"name" : "tatarism-4-2-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"fontsize" : [ 11.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"fontsize" : [ 11.0 ]
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -10995,12 +17742,12 @@
 , 			{
 				"name" : "tatarism-4-3",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -11009,12 +17756,12 @@
 , 			{
 				"name" : "tatarism-4-4",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -11023,12 +17770,11 @@
 , 			{
 				"name" : "tatarism-5",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -11038,7 +17784,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0
 					}
-
+,
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -11047,12 +17794,12 @@
 , 			{
 				"name" : "tatarism-6",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -11061,12 +17808,12 @@
 , 			{
 				"name" : "tatarism-7",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -11075,13 +17822,13 @@
 , 			{
 				"name" : "tatarism-7-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -11090,12 +17837,12 @@
 , 			{
 				"name" : "tatarism-8",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -11104,13 +17851,13 @@
 , 			{
 				"name" : "tatarism-8-1",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
 					"selectioncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
+					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -11119,12 +17866,12 @@
 , 			{
 				"name" : "tatarism-9",
 				"default" : 				{
-					"fontname" : [ "Futura Medium" ],
-					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"elementcolor" : [ 0.589653, 0.589635, 0.589645, 1.0 ],
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fontname" : [ "Futura Medium" ],
+					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"bgcolor" : [ 0.19771, 0.188048, 0.201856, 1.0 ],
 					"color" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"textcolor_inverse" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
