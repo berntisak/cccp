@@ -2,7 +2,7 @@ Python-pakke for offline-analyse:
 ```
 import cccp
 ````
-Et demo-script finnes i [CCCP-offline-analyzer-3.py]([CCCP-offline-analyzer-3.py)
+Et demo-script finnes i [demo1-elaborate-syntax.py]([./demo1-elaborate-syntax.py)
 
 Pakken har følgende avhengigheter, som installeres med f.eks. pip:
 - dacite

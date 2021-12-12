@@ -1,0 +1,125 @@
+{
+    "info": {
+        "description": "First improvisation recording",
+        "performer": "Kasiva Mutua",
+        "SampleManager_metadata": {
+            "Tag1": "Improvisation",
+            "Tag2": "Studio",
+            "Tag3": "RecordedPerformance"
+        },
+        "audiofile": "PercussionImpro1.2.wav",
+        "format": "WAVE",
+        "channels": 2,
+        "bitdepth": 24,
+        "samplingrate": 48000.0,
+        "duration": 532162.4791,
+        "BPM": 0.0,
+        "date_analyzed" : "2020-12-09 / 00:30:31"
+    },
+    "analysis0": {
+        "segmentation": {
+            "alg": "NoveltySlice",
+            "version": "v1.0",
+            "info": "Medium length slicing using FluCoMas novelty slicer",
+            "param": {
+                "feature": "spectrum",
+                "threshold": 0.01,
+                "filtersize": 1,
+                "kernelsize": 31,
+                "fftparams": [128, -1, -1],
+                "min_length": 0.1,
+                "max_length": 10
+            },
+            "segments": [
+                { "start": 0.0, "duration": 2250.37 },
+                { "start": 2573.57, "duration": 1175.74 }
+            ]
+        },
+        "descriptors": [
+            { "type": "mfcc", "impl": "MuBu", "setting": { "a": [0.5] } },
+            { "type": "mfcc_std", "impl": "MuBu", "setting": { "a": [0.5] } },
+            { "type": "loudness", "impl": "MuBu", "setting": { "a": 1 } },
+            { "type": "loudness_std", "impl": "MuBu", "setting": { "a": 1 } },
+            { "type": "spectral_crest", "impl": "MuBu", "setting": { "a": [0.75, 10, 20000] } },
+            { "type": "spectral_crest_std", "impl": "MuBu", "setting": { "a": [0.75, 10, 20000] } },
+            { "type": "spectral_flatness", "impl": "MuBu", "setting": { "a": [0.75, 10, 20000] } },
+            { "type": "spectral_flatness_std", "impl": "MuBu", "setting": { "a": [0.75, 10, 20000] } }
+        ],
+        "description": [
+            {
+                "segment": 0.0,
+                "mfcc": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                "mfcc_std": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                "loudness": 0.5,
+                "loudness_std": 0.5,
+                "spectral_flatness": [1, 2, 3, 4],
+                "spectral_flatness_std": [1, 2, 3, 4],
+                "spectral_crest": [1, 2],
+                "spectral_crest_std": [1, 2]
+            },
+            {
+                "segment": 2573.57,
+                "mfcc": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                "mfcc_std": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                "loudness": 0.5,
+                "loudness_std": 0.5,
+                "spectral_flatness": [1, 2, 3, 4],
+                "spectral_flatness_std": [1, 2, 3, 4],
+                "spectral_crest": [1, 2],
+                "spectral_crest_std": [1, 2]
+            }
+        ]
+    },
+    "analysis1": {
+        "segmentation": {
+            "alg": "pipo-FFT",
+            "version": "v1.5",
+            "info": "Short slices using pipo's FFT onset detection",
+            "param": {
+                "slice_size": 1024,
+                "hop_size": 128,
+                "norm": "power",
+                "mode": "power",
+                "scale_minmax": [1, 10, 0, 10, "log"],
+                "filtersize": 5,
+                "duration": 1,
+                "onseg_max": 1,
+                "offthresh": -120,
+                "durthresh": 100,
+                "min_length": 0.1,
+                "max_length": 1.5
+            },
+            "segments": [
+                { "start": 0.0, "duration": 250.37 },
+                { "start": 1175.2, "duration": 175.74 } 
+            ]
+        },
+        "descriptors": [
+            { "type": "mfcc", "impl": "Librosa", "setting": { "a": [0.5] } }
+        ],
+        "description": [
+            {
+                "segment": 0.0,
+                "mfcc": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                "mfcc_std": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                "loudness": 0.5,
+                "loudness_std": 0.5,
+                "spectral_flatness": [1, 2, 3, 4],
+                "spectral_flatness_std": [1, 2, 3, 4],
+                "spectral_crest": [1, 2],
+                "spectral_crest_std": [1, 2]
+            },
+            {
+                "segment": 1175.2,
+                "mfcc": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                "mfcc_std": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                "loudness": 0.5,
+                "loudness_std": 0.5,
+                "spectral_flatness": [1, 2, 3, 4],
+                "spectral_flatness_std": [1, 2, 3, 4],
+                "spectral_crest": [1, 2],
+                "spectral_crest_std": [1, 2]
+            }
+        ]
+    }
+}
