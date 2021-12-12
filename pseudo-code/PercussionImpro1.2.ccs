@@ -95,30 +95,16 @@
             ]
         },
         "descriptors": [
-            { "type": "mfcc", "impl": "Librosa", "setting": { "a": [0.5] } }
+            { "type": "mfcc", "impl": "Librosa", "setting": { "n_mfcc": 20, "dct_type": 2, "norm": "ortho" } }
         ],
         "description": [
             {
                 "segment": 0.0,
-                "mfcc": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-                "mfcc_std": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-                "loudness": 0.5,
-                "loudness_std": 0.5,
-                "spectral_flatness": [1, 2, 3, 4],
-                "spectral_flatness_std": [1, 2, 3, 4],
-                "spectral_crest": [1, 2],
-                "spectral_crest_std": [1, 2]
+                "mfcc": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
             },
             {
                 "segment": 1175.2,
-                "mfcc": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-                "mfcc_std": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-                "loudness": 0.5,
-                "loudness_std": 0.5,
-                "spectral_flatness": [1, 2, 3, 4],
-                "spectral_flatness_std": [1, 2, 3, 4],
-                "spectral_crest": [1, 2],
-                "spectral_crest_std": [1, 2]
+                "mfcc": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
             }
         ]
     }
