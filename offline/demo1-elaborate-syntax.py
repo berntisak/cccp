@@ -13,14 +13,25 @@ segmentation = slicer.run(percussionImpro.audio)
 # Felt kan endres eller legges til etter sementering, for eksempel
 segmentation.info="Medium length slicing using FluCoMa novelty slicer"
 
-# Print objektet som json
+# Print objektet som .json-data
 cp.print(segmentation)
 # Noden "segments" er en liste av objekter av dataklassen Segment
 # Print ett segment
 cp.print(segmentation.segments[0])
 
-# Legge til segmenteringen i ccs-objektet (erstatter evt. eksisterende data for noden)
+# Manipulere segmenter som data: trekke ut elementer av listen
+new_segments = []
+for seg in segmentation.segments:
+    if seg.duration < 0.3:
+        new_segments.append(seg)
+
+segmentation.segments = new_segments
+
+# Legge til segmenteringen i ccs-objektet (erstatter evt. eksisterende data i noden)
 percussionImpro.analysis0.segmentation = segmentation
+
+# print hele strukturen etter manipulering
+cp.print(percussionImpro)
 
 # Oppdater fil med den modifiserte strukturen
 percussionImpro.save()
