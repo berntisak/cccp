@@ -9,7 +9,9 @@ percussionImpro = cp.open("path/to/sounds/test-sound")
 slicer = cp.segmenters.NoveltySlice(feature=0, threshold=0.5, filtersize=1, kernelsize=3, fftparams=[1024, -1, -1], min_length=2)
 segmentation = slicer.run(percussionImpro.audio)
 
-# Objektet "segmentation" er et dataclass-objekt med felter for info om algoritme, samt selve segmentene.
+# Objektet "segmentation" er av klassen Segmentation, som er dataklasse med metadata og segmenter som medlemmer.
+# For en oversikt over klassene, se cccp/cclasses.py
+
 # Felt kan endres eller legges til etter sementering, for eksempel
 segmentation.info="Medium length slicing using FluCoMa novelty slicer"
 
