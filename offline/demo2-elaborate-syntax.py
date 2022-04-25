@@ -3,7 +3,7 @@
 import cccp as cp
 
 # instansier et CSS-objekt basert på test-sound.wav og test-sound.ccs (eksisterer alltid i par)
-percussionImpro = cp.open("/Users/henriks/prosjekter/co-creative/cccp/offline/sounds/test-sound")
+percussionImpro = cp.open("<path-to>/cccp/offline/sounds/test-sound")
 
 # kjør segmentering
 slicer = cp.segmenters.NoveltySlice(feature=0, threshold=0.5, filtersize=1, kernelsize=3, fftparams=[1024, -1, -1], min_length=2)

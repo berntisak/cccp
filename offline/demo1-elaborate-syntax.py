@@ -3,7 +3,7 @@
 import cccp as cp
 
 # instansier et CSS-objekt basert på test-sound.wav og test-sound.ccs (eksisterer alltid i par)
-percussionImpro = cp.open("path/to/sounds/test-sound")
+percussionImpro = cp.open("<path-to>/cccp/offline/sounds/test-sound")
 
 # kjør segmentering
 slicer = cp.segmenters.NoveltySlice(feature=0, threshold=0.5, filtersize=1, kernelsize=3, fftparams=[1024, -1, -1], min_length=2)
@@ -24,7 +24,7 @@ cp.print(segmentation.segments[0])
 # Manipulere segmenter som data: trekke ut elementer av listen
 new_segments = []
 for seg in segmentation.segments:
-    if seg.duration < 0.3:
+    if seg.duration > 0.1:
         new_segments.append(seg)
 
 segmentation.segments = new_segments
@@ -35,5 +35,5 @@ percussionImpro.analysis0.segmentation = segmentation
 # print hele strukturen etter manipulering
 cp.print(percussionImpro)
 
-# Oppdater fil med den modifiserte strukturen
-percussionImpro.save()
+# Oppdater fil med den modifiserte strukturen, om ønskelig
+#percussionImpro.save()
