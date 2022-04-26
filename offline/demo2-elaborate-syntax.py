@@ -3,8 +3,7 @@
 import cccp as cp
 
 # instansier et CSS-objekt basert på test-sound.wav og test-sound.ccs (eksisterer alltid i par)
-#percussionImpro = cp.open("<path-to>/cccp/offline/sounds/test-sound")
-percussionImpro = cp.open("/Users/henriks/prosjekter/co-creative/cccp/offline/sounds/test-sound")
+percussionImpro = cp.open("<path-to>/cccp/offline/sounds/test-sound")
 
 # convenience-variabler:
 audio = percussionImpro.audio
