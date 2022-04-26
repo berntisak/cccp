@@ -47,14 +47,13 @@ mfcc = analyser.run(audio, analysis.segmentation.segments)
 # Legge inn analysedataene i strukturen
 percussionImpro.merge(analysis, mfcc)
 
-print("- Analysedata for segmentet med indeks 1:")
+print("- Skrive ut analysedata for noen utvalgte segmenter:")
 for s in analysis.slices:
-    if s.start_time == analysis.segmentation.segments[1].start:
+    if s.start_time == analysis.segmentation.segments[1].start or (s.start_time > 2.0 and s.start_time < 3.0):
         cp.print(s)
 
-print("- Hele strukturen etter tillegg av analysedata:")
-cp.print(percussionImpro)
-
+#print("- Hele strukturen etter tillegg av analysedata:")
+#cp.print(percussionImpro)
 
 # Oppdater fil med den modifiserte strukturen, om ønskelig
 #percussionImpro.save()
