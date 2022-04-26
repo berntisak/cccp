@@ -10,7 +10,7 @@ import cclasses
 
 class NoveltySlice:
     def __init__(self, feature=0, threshold=0.5, filtersize=1, kernelsize=3, fftparams=[1024, -1, -1], min_length=2):
-        self.obj = cclasses.Segmentation(alg="NoveltySlice",
+        self.segmenter = cclasses.Segmenter(algorithm="NoveltySlice",
                                 version="v1.0",
                                 info="FluCoMa novelty slicer",
                                 param={
@@ -20,11 +20,11 @@ class NoveltySlice:
                                     "kernelsize": kernelsize,
                                     "fftparams": fftparams,
                                     "min_length": min_length
-                                    },
-                                segments=[]
-                                )
+                                    })
+        
     def run(self, audio):
-        param = self.obj.param
+        param = self.segmenter.param
+                
         # her er parameternavnene spesifikke for NoveltySlice, som kan avvike fra de generiske i Segmentation
         result = fluid.noveltyslice(source=audio.filename, # bruker foreløpig filnavnet i audio
                                 feature=param["feature"],
@@ -39,9 +39,9 @@ class NoveltySlice:
         samplerate = audio.samplerate
         segments = []
         for start,end in zip(seg_starts,seg_starts[1:]):
-            a = cclasses.Segment(start/samplerate, (end-start)/samplerate)
-            segments.append(a)
+            segment = cclasses.Segment(start/samplerate, (end-start)/samplerate)
+            segments.append(segment)
 
-        segmentation = cclasses.Segmentation(**asdict(self.obj))  # tar en kopi
-        segmentation.segments = segments  # legger til segmentene
+        segmenter = cclasses.Segmenter(**asdict(self.segmenter))  # tar en kopi
+        segmentation = cclasses.Segmentation(segmenter=segmenter, segments=segments)
         return segmentation

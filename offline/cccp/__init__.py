@@ -1,6 +1,7 @@
-from ccs import CCS
+#from ccs import CCS
+import ccs
 import segmenters
-#import analysers
+import analysers
 
 from dataclasses import dataclass, asdict, is_dataclass
 from typing import Any
@@ -14,8 +15,7 @@ class DataclassValue:
     _: Any
 
 def open(file_basename):
-    ccs = CCS(file_basename)
-    return ccs
+    return ccs.CCS(file_basename)
  
 def print(node):
     if is_dataclass(node):
