@@ -13,3 +13,5 @@ Pakken har følgende avhengigheter, som installeres med f.eks. pip:
 
 Dessuten må [Flucoma cli tools](https://www.flucoma.org/download/) installeres, og sti til binærfilene settes i [noveltyslice.py](cccp/noveltyslice.py).
 
+Python-path må inneholde katalogen hvor cccp-modulen ligger:
+export PYTHONPATH="${PYTHONPATH}:<path-to>/cccp/offline/cccp"

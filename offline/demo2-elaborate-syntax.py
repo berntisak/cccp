@@ -3,8 +3,7 @@
 import cccp as cp
 
 # instansier et CSS-objekt basert på test-sound.wav og test-sound.ccs (eksisterer alltid i par)
-#percussionImpro = cp.open("<path-to>/cccp/offline/sounds/test-sound")
-percussionImpro = cp.open("/Users/henriks/prosjekter/co-creative/cccp/offline/sounds/test-sound")
+percussionImpro = cp.open("<path-to>/cccp/offline/sounds/test-sound")
 
 # convenience-variabler:
 audio = percussionImpro.audio
@@ -47,10 +46,20 @@ mfcc = analyser.run(audio, analysis.segmentation.segments)
 # Legge inn analysedataene i strukturen
 percussionImpro.merge(analysis, mfcc)
 
-print("- Skrive ut analysedata for noen utvalgte segmenter:")
-for s in analysis.slices:
-    if s.start_time == analysis.segmentation.segments[1].start or (s.start_time > 2.0 and s.start_time < 3.0):
-        cp.print(s)
+print("- Velger ut segmenter etter tidspunkt:")
+selected_segment = analysis.segmentation.segments[1]
+for slc in analysis.slices:
+    if slc.segment_start == selected_segment.start or (slc.segment_start > 2.0 and slc.segment_start < 3.0):
+        cp.print(slc)
+
+print("- Velger ut segmenter etter innhold i MFCC:")
+for slc in analysis.slices:
+    if slc.mfcc[0] > 4.0:
+        cp.print(slc)
+        # finn og skriv ut tilhørende segments:
+        for seg in analysis.segmentation.segments:
+            if seg.start == slc.segment_start:
+                cp.print(seg)
 
 #print("- Hele strukturen etter tillegg av analysedata:")
 #cp.print(percussionImpro)

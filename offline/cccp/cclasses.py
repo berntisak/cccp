@@ -47,7 +47,7 @@ class Descriptors:
 
 @dataclass
 class Slice:
-    start_time: float   # start-tidspunkt (float) fungerer nå som segment-ID
+    segment_start: float   # start-tidspunkt (float) fungerer nå som segment-ID
     mfcc: Optional[list]
     mfcc_std: Optional[list]
     loudness: Optional[float]

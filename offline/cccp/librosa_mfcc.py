@@ -44,7 +44,7 @@ class LibrosaMFCC:
                 mean[n] = np.mean(mfcc[:,n])
                 std[n] = np.std(mfcc[:,n])
             
-            slc = cclasses.Slice(start_time=clip.filestart, mfcc=NdArrayToList(mean),
+            slc = cclasses.Slice(segment_start=clip.filestart, mfcc=NdArrayToList(mean),
                                  mfcc_std=NdArrayToList(std),
                                  loudness=0.,spectral_flatness=[],spectral_flatness_std=[],
                                  spectral_crest=[],spectral_crest_std=[])
