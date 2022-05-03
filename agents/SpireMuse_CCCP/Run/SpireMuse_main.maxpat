@@ -303,15 +303,15 @@
 			}
 , 			{
 				"name" : "SOM-nodes.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/guitar/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/guitar/data",
+				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
+				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "VMM-training-SOM-seq.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/guitar/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/guitar/data",
+				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
+				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -350,15 +350,15 @@
 			}
 , 			{
 				"name" : "clusters.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/guitar/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/guitar/data",
+				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
+				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "data-concatenated.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/guitar/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/guitar/data",
+				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
+				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -398,8 +398,8 @@
 			}
 , 			{
 				"name" : "pctm.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/guitar/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/guitar/data",
+				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
+				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -416,8 +416,8 @@
 			}
 , 			{
 				"name" : "pitches.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/guitar/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/guitar/data",
+				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
+				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -447,15 +447,15 @@
 			}
 , 			{
 				"name" : "stats.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/guitar/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/guitar/data",
+				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
+				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tempos.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/guitar/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/guitar/data",
+				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
+				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
