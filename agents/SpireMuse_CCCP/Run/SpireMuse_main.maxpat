@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 87.0, 100.0, 1053.0, 585.0 ],
+		"rect" : [ 143.0, 79.0, 1053.0, 585.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 11.0,
@@ -112,7 +112,7 @@
 					"numoutlets" : 2,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 68.000008106231689, 59.0, 962.0, 590.0 ],
+					"patching_rect" : [ 68.000008106231689, 65.0, 962.0, 590.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 8.916680335998535, 6.0, 997.0, 541.0 ],
 					"viewvisibility" : 1
@@ -254,8 +254,8 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "OMax.yin+.maxpat",
-				"bootpath" : "~/Code/art-projects/co-creative-spaces/SpireMuse/abstractions/Somax",
-				"patcherrelativepath" : "../../../../SpireMuse/abstractions/Somax",
+				"bootpath" : "~/Code/art-projects/co-creative-spaces/cccp/agents/SpireMuse_CCCP/abstractions/Somax",
+				"patcherrelativepath" : "../abstractions/Somax",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -303,36 +303,36 @@
 			}
 , 			{
 				"name" : "SOM-nodes.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
+				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
+				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "VMM-training-SOM-seq.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
+				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
+				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "Yin+.maxpat",
-				"bootpath" : "~/Code/art-projects/co-creative-spaces/SpireMuse/abstractions/Somax",
-				"patcherrelativepath" : "../../../../SpireMuse/abstractions/Somax",
+				"bootpath" : "~/Code/art-projects/co-creative-spaces/cccp/agents/SpireMuse_CCCP/abstractions/Somax",
+				"patcherrelativepath" : "../abstractions/Somax",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "audio2chroma.maxpat",
-				"bootpath" : "~/Code/art-projects/co-creative-spaces/SpireMuse/abstractions/Somax",
-				"patcherrelativepath" : "../../../../SpireMuse/abstractions/Somax",
+				"bootpath" : "~/Code/art-projects/co-creative-spaces/cccp/agents/SpireMuse_CCCP/abstractions/Somax",
+				"patcherrelativepath" : "../abstractions/Somax",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bc.autoname.js",
-				"bootpath" : "~/Code/art-projects/co-creative-spaces/SpireMuse/abstractions/externals",
-				"patcherrelativepath" : "../../../../SpireMuse/abstractions/externals",
+				"bootpath" : "~/Code/art-projects/co-creative-spaces/cccp/agents/SpireMuse_CCCP/abstractions/externals",
+				"patcherrelativepath" : "../abstractions/externals",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -350,15 +350,15 @@
 			}
 , 			{
 				"name" : "clusters.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
+				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
+				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "data-concatenated.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
+				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
+				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -398,15 +398,15 @@
 			}
 , 			{
 				"name" : "pctm.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
+				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
+				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pipo-VA-online-interactive-v01~.maxpat",
-				"bootpath" : "~/Code/art-projects/co-creative-spaces/SpireMuse/abstractions/VA_estimation",
-				"patcherrelativepath" : "../../../../SpireMuse/abstractions/VA_estimation",
+				"bootpath" : "~/Code/art-projects/co-creative-spaces/cccp/agents/SpireMuse_CCCP/abstractions/VA_estimation",
+				"patcherrelativepath" : "../abstractions/VA_estimation",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -416,8 +416,8 @@
 			}
 , 			{
 				"name" : "pitches.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
+				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
+				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -433,29 +433,29 @@
 			}
 , 			{
 				"name" : "somax.audioinfluencer.maxpat",
-				"bootpath" : "~/Code/art-projects/co-creative-spaces/SpireMuse/abstractions/Somax",
-				"patcherrelativepath" : "../../../../SpireMuse/abstractions/Somax",
+				"bootpath" : "~/Code/art-projects/co-creative-spaces/cccp/agents/SpireMuse_CCCP/abstractions/Somax",
+				"patcherrelativepath" : "../abstractions/Somax",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "sr.maxpat",
-				"bootpath" : "~/Code/art-projects/co-creative-spaces/SpireMuse/abstractions/Somax",
-				"patcherrelativepath" : "../../../../SpireMuse/abstractions/Somax",
+				"bootpath" : "~/Code/art-projects/co-creative-spaces/cccp/agents/SpireMuse_CCCP/abstractions/Somax",
+				"patcherrelativepath" : "../abstractions/Somax",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "stats.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
+				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
+				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tempos.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/cocreative_cacophony/data",
+				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
+				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
