@@ -30372,7 +30372,7 @@
 																	"numoutlets" : 2,
 																	"outlettype" : [ "", "" ],
 																	"patching_rect" : [ 38.0, 144.0, 51.0, 22.0 ],
-																	"text" : "zl mth 5"
+																	"text" : "zl mth 4"
 																}
 
 															}
@@ -31043,7 +31043,7 @@
 																	"numoutlets" : 1,
 																	"outlettype" : [ "int" ],
 																	"patching_rect" : [ 606.666666666666288, 258.0, 33.0, 22.0 ],
-																	"text" : "<= 5"
+																	"text" : "<= 8"
 																}
 
 															}
