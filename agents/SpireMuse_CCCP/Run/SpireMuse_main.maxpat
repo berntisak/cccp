@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 143.0, 79.0, 1053.0, 585.0 ],
+		"rect" : [ 34.0, 79.0, 1053.0, 585.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 11.0,
@@ -80,7 +80,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 192.0, 756.0, 45.0, 45.0 ]
+					"patching_rect" : [ 108.666674772898347, 767.0, 59.666666666666657, 59.666666666666657 ]
 				}
 
 			}
@@ -145,16 +145,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-3", 2 ],
 					"midpoints" : [ 227.5, 740.0, 1037.45833738644933, 740.0, 1037.45833738644933, 27.0, 706.166674772898318, 27.0 ],
-					"order" : 0,
-					"source" : [ "obj-12", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 1 ],
-					"midpoints" : [ 227.5, 739.5, 227.5, 739.5 ],
-					"order" : 1,
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -188,7 +178,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
-					"midpoints" : [ 1020.500008106231689, 752.0, 201.5, 752.0 ],
+					"midpoints" : [ 1020.500008106231689, 752.0, 118.166674772898347, 752.0 ],
 					"source" : [ "obj-3", 1 ]
 				}
 
@@ -197,6 +187,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"midpoints" : [ 158.833341439565004, 684.0, 272.5, 684.0 ],
+					"order" : 0,
 					"source" : [ "obj-6", 2 ]
 				}
 
@@ -214,6 +205,14 @@
 					"destination" : [ "obj-3", 0 ],
 					"midpoints" : [ 77.500008106231689, 726.0, 21.500008106231689, 726.0, 21.500008106231689, 52.0, 77.500008106231689, 52.0 ],
 					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 1 ],
+					"order" : 1,
+					"source" : [ "obj-6", 2 ]
 				}
 
 			}
@@ -243,6 +242,8 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-3::obj-66" : [ "number", "number", 0 ],
+			"obj-3::obj-70" : [ "number[1]", "number[1]", 0 ],
 			"obj-3::obj-77" : [ "live.text[13]", "live.text", 0 ],
 			"obj-6::obj-180::obj-53" : [ "number[17]", "number", 0 ],
 			"parameterbanks" : 			{
@@ -303,15 +304,15 @@
 			}
 , 			{
 				"name" : "SOM-nodes.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
+				"bootpath" : "~/Downloads/CCS-corpus/ccs-9-May/data",
+				"patcherrelativepath" : "../../../../../../../Downloads/CCS-corpus/ccs-9-May/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "VMM-training-SOM-seq.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
+				"bootpath" : "~/Downloads/CCS-corpus/ccs-9-May/data",
+				"patcherrelativepath" : "../../../../../../../Downloads/CCS-corpus/ccs-9-May/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -350,15 +351,15 @@
 			}
 , 			{
 				"name" : "clusters.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
+				"bootpath" : "~/Downloads/CCS-corpus/ccs-9-May/data",
+				"patcherrelativepath" : "../../../../../../../Downloads/CCS-corpus/ccs-9-May/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "data-concatenated.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
+				"bootpath" : "~/Downloads/CCS-corpus/ccs-9-May/data",
+				"patcherrelativepath" : "../../../../../../../Downloads/CCS-corpus/ccs-9-May/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -398,8 +399,8 @@
 			}
 , 			{
 				"name" : "pctm.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
+				"bootpath" : "~/Downloads/CCS-corpus/ccs-9-May/data",
+				"patcherrelativepath" : "../../../../../../../Downloads/CCS-corpus/ccs-9-May/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -416,8 +417,8 @@
 			}
 , 			{
 				"name" : "pitches.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
+				"bootpath" : "~/Downloads/CCS-corpus/ccs-9-May/data",
+				"patcherrelativepath" : "../../../../../../../Downloads/CCS-corpus/ccs-9-May/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -447,15 +448,15 @@
 			}
 , 			{
 				"name" : "stats.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
+				"bootpath" : "~/Downloads/CCS-corpus/ccs-9-May/data",
+				"patcherrelativepath" : "../../../../../../../Downloads/CCS-corpus/ccs-9-May/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tempos.txt",
-				"bootpath" : "/Users/Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
-				"patcherrelativepath" : "../../../../../../../../Shared/Dropbox/CCS/Trained_SOM_agents/piano/data",
+				"bootpath" : "~/Downloads/CCS-corpus/ccs-9-May/data",
+				"patcherrelativepath" : "../../../../../../../Downloads/CCS-corpus/ccs-9-May/data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
