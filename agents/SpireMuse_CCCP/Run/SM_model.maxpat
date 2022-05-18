@@ -2217,6 +2217,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-210",
@@ -5842,11 +5843,11 @@
 								"box" : 								{
 									"id" : "obj-27",
 									"maxclass" : "newobj",
-									"numinlets" : 5,
-									"numoutlets" : 5,
-									"outlettype" : [ "", "", "", "", "" ],
-									"patching_rect" : [ 356.277769088745117, 189.0, 217.722230911254883, 22.0 ],
-									"text" : "route quantize voices panwidth rand-pb"
+									"numinlets" : 6,
+									"numoutlets" : 6,
+									"outlettype" : [ "", "", "", "", "", "" ],
+									"patching_rect" : [ 356.277769088745117, 189.0, 257.0, 22.0 ],
+									"text" : "route quantize voices panwidth rand-pb timestr"
 								}
 
 							}
@@ -6714,7 +6715,7 @@
 								"box" : 								{
 									"id" : "obj-3",
 									"maxclass" : "newobj",
-									"numinlets" : 3,
+									"numinlets" : 4,
 									"numoutlets" : 4,
 									"outlettype" : [ "signal", "signal", "", "" ],
 									"patching_rect" : [ 355.0, 264.5, 211.0, 22.0 ],
@@ -6729,7 +6730,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 582.833329677581787, 231.5, 128.0, 22.0 ],
+									"patching_rect" : [ 621.833329677581787, 231.5, 128.0, 22.0 ],
 									"text" : "route audio/bypass"
 								}
 
@@ -6741,7 +6742,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 582.833329677581787, 189.0, 115.0, 22.0 ],
+									"patching_rect" : [ 621.833329677581787, 189.0, 115.0, 22.0 ],
 									"text" : "r #0-inputmess"
 								}
 
@@ -6878,7 +6879,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 582.833329677581787, 264.5, 56.0, 20.0 ],
+									"patching_rect" : [ 621.833329677581787, 264.5, 56.0, 20.0 ],
 									"style" : "tatarism",
 									"text" : "!- 1.",
 									"textcolor" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ]
@@ -7059,7 +7060,7 @@
 								"patchline" : 								{
 									"color" : [ 0.192119985818863, 0.719752073287964, 0.284884035587311, 1.0 ],
 									"destination" : [ "obj-37", 1 ],
-									"midpoints" : [ 592.333329677581787, 299.25, 404.5, 299.25 ],
+									"midpoints" : [ 631.333329677581787, 299.25, 404.5, 299.25 ],
 									"order" : 1,
 									"source" : [ "obj-19", 0 ]
 								}
@@ -7069,7 +7070,7 @@
 								"patchline" : 								{
 									"color" : [ 0.694703698158264, 0.324241161346436, 0.367801874876022, 1.0 ],
 									"destination" : [ "obj-61", 1 ],
-									"midpoints" : [ 592.333329677581787, 304.25, 469.166625999999951, 304.25 ],
+									"midpoints" : [ 631.333329677581787, 304.25, 469.166625999999951, 304.25 ],
 									"order" : 0,
 									"source" : [ "obj-19", 0 ]
 								}
@@ -7130,7 +7131,7 @@
 								"patchline" : 								{
 									"color" : [ 0.530121624469757, 0.897229194641113, 0.221751779317856, 1.0 ],
 									"destination" : [ "obj-141", 0 ],
-									"midpoints" : [ 415.458326816558838, 216.0, 449.833329677581787, 216.0 ],
+									"midpoints" : [ 413.37776908874514, 216.0, 449.833329677581787, 216.0 ],
 									"source" : [ "obj-27", 1 ]
 								}
 
@@ -7146,9 +7147,17 @@
 							}
 , 							{
 								"patchline" : 								{
+									"color" : [ 0.79995322227478, 0.0, 0.415258884429932, 1.0 ],
+									"destination" : [ "obj-3", 3 ],
+									"source" : [ "obj-27", 4 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"color" : [ 0.117392346262932, 0.113873526453972, 0.998255014419556, 1.0 ],
 									"destination" : [ "obj-3", 2 ],
-									"midpoints" : [ 514.819442272186279, 237.25, 556.5, 237.25 ],
+									"midpoints" : [ 508.577769088745129, 258.25, 492.5, 258.25 ],
 									"source" : [ "obj-27", 3 ]
 								}
 
@@ -7157,7 +7166,7 @@
 								"patchline" : 								{
 									"color" : [ 0.457598954439163, 0.155409216880798, 0.701082229614258, 1.0 ],
 									"destination" : [ "obj-3", 1 ],
-									"midpoints" : [ 465.138884544372559, 220.5, 460.5, 220.5 ],
+									"midpoints" : [ 460.977769088745106, 220.5, 428.5, 220.5 ],
 									"source" : [ "obj-27", 2 ]
 								}
 
@@ -12083,11 +12092,6 @@
 											}
 , 											{
 												"name" : "gill",
-												"comment" : 												{
-													"fontname" : [ "Gill Sans" ],
-													"fontsize" : [ 11.0 ]
-												}
-,
 												"number" : 												{
 													"fontname" : [ "Gill Sans" ],
 													"fontsize" : [ 11.0 ]
@@ -12099,6 +12103,11 @@
 												}
 ,
 												"message" : 												{
+													"fontname" : [ "Gill Sans" ],
+													"fontsize" : [ 11.0 ]
+												}
+,
+												"comment" : 												{
 													"fontname" : [ "Gill Sans" ],
 													"fontsize" : [ 11.0 ]
 												}
@@ -16002,11 +16011,6 @@
 																							}
 , 																							{
 																								"name" : "gill",
-																								"comment" : 																								{
-																									"fontname" : [ "Gill Sans" ],
-																									"fontsize" : [ 11.0 ]
-																								}
-,
 																								"number" : 																								{
 																									"fontname" : [ "Gill Sans" ],
 																									"fontsize" : [ 11.0 ]
@@ -16018,6 +16022,11 @@
 																								}
 ,
 																								"message" : 																								{
+																									"fontname" : [ "Gill Sans" ],
+																									"fontsize" : [ 11.0 ]
+																								}
+,
+																								"comment" : 																								{
 																									"fontname" : [ "Gill Sans" ],
 																									"fontsize" : [ 11.0 ]
 																								}
@@ -21570,11 +21579,6 @@
 																			}
 , 																			{
 																				"name" : "gill",
-																				"comment" : 																				{
-																					"fontname" : [ "Gill Sans" ],
-																					"fontsize" : [ 11.0 ]
-																				}
-,
 																				"number" : 																				{
 																					"fontname" : [ "Gill Sans" ],
 																					"fontsize" : [ 11.0 ]
@@ -21586,6 +21590,11 @@
 																				}
 ,
 																				"message" : 																				{
+																					"fontname" : [ "Gill Sans" ],
+																					"fontsize" : [ 11.0 ]
+																				}
+,
+																				"comment" : 																				{
 																					"fontname" : [ "Gill Sans" ],
 																					"fontsize" : [ 11.0 ]
 																				}
