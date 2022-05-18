@@ -18,7 +18,7 @@ MAX_SILENCE = 1.5   # max time of silence (in ms)
 MIN_ONSETS = 3      # min no. total onsets
 
 METRO_INTERVAL = 1  # metronome interval (seconds)
-MAX_HISTORY = 10    # max no. of onset lists stored
+MAX_HISTORY = 5    # max no. of onset lists stored
 
 PRINT = True        # toggle minimal printing 
 DEBUG = False        # toggle debug mode (printing)
@@ -41,7 +41,7 @@ aff_prop.random_state = None
 
 def on_message_onset(client, userdata, message):
     global onset_count
-    if (DEBUG):
+    if (PRINT):
         print("Onset received: " ,str(message.payload.decode("utf-8")))
     onset = str(message.payload.decode("utf-8")).split()
     onset = [float(i) for i in onset]
@@ -49,16 +49,18 @@ def on_message_onset(client, userdata, message):
     if (inter_onset_time < MIN_TIME):
         return
     elif inter_onset_time > (MAX_SILENCE * 1000) or onset_count > MAX_ONSETS:
+        silence_timeout.reset_timeout()
         if (DEBUG):
             print("New phrase registered!\n")
         register_new_phrase()
     elif onset_count == 0:
+        silence_timeout.reset_timeout()
         # skip first onset and increase counter only
         onset_count += 1
     else:
+        silence_timeout.reset_timeout()
         phrase_dict[phrase_idx].append(onset)
         onset_count += 1
-        silence_timeout.reset_timeout()
         long_timeout.dec_counter(METRO_INTERVAL * 0.1)
     
 
@@ -70,46 +72,56 @@ def register_new_phrase():
     global pub_topic
 
     if len(phrase_dict[phrase_idx]) >= MIN_ONSETS:
+        silence_timeout.reset_timeout()       
+        long_timeout.reset_timeout()
+
         # Copy list of last entered phrase
         last_phrase = list(phrase_dict[phrase_idx])
 
         # Clean out older copies 
         if len(phrase_dict) > MAX_HISTORY:
-            del phrase_dict[phrase_idx - MAX_HISTORY]
+            if (DEBUG):
+                tmp = (phrase_idx - (MAX_HISTORY-1))
+                print("Deleting oldest phrase from history (idx: ", tmp, "):")
+                print(phrase_dict[phrase_idx - (MAX_HISTORY)], "\n")
+            del phrase_dict[phrase_idx - (MAX_HISTORY)]
 
         # Make all onsets into a 1D array
+        if(DEBUG):
+            print("\nNEW PHRASE!")
+            print("incoming phrase:", last_phrase, "\n")
+
+        #if (len(phrase_dict.values()) > 0):
         onset_list = np.concatenate(list(phrase_dict.values()))
         
         # Train AffProp 
         # TODO: How to deal with failed training (class -1)
         aff_prop.fit(onset_list)
         P = aff_prop.predict(last_phrase)
-        if (DEBUG):
-            print("Predicted values from Affinity Propagation:\n")
-            print(P)
-            print("\n")
-        
+        if (PRINT):
+            print("Predicted values from Affinity Propagation:\n", P)
+
         new_phrase = []
         for i in range(0,len(last_phrase)):
             new_phrase.append([P[i], last_phrase[i]])
 
         if (PRINT):
-            print("\nNew phrase registered:")
+            print("\nNew phrase registered at index: ", phrase_idx)
             print(new_phrase)
         client.publish(pub_topic, str(new_phrase))
+
         # Increment
         phrase_idx += 1   
         
         #Reset
         onset_count = 0
         phrase_dict[phrase_idx] = []
-        silence_timeout.reset_timeout()       
-        long_timeout.reset_timeout()
+
     else: 
         onset_count = 0
         silence_timeout.reset_timeout()       
         long_timeout.reset_timeout()  
-        if (DEBUG):
+        if (PRINT):
             print("Too few onsets to register new phrase")
 
 if __name__ == "__main__":
