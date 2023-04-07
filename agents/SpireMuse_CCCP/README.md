@@ -1,6 +1,6 @@
-# Spire Muse v1.0
+# CCCP v1.0
 
-A Virtual Musical Partner for Creative Brainstorming
+A Virtual Musical Partner 
 
 by Notto J. W. Thelle
 
@@ -8,9 +8,9 @@ using MASOM (Musical Agent based on Self-Organizing Maps) v2.0.2 by Kıvanç Tat
 
 For the original version of MASOM, go to https://github.com/ktatar/MASOM
 
-### Spire Muse vs. MASOM
+### CCCP vs. MASOM
 
-This version of MASOM has been modified to work with the Spire Muse interface. The training module (including all the files in the Training folder) is essentially a modified version of MASOM. The run-time module (everything in the Run folder) is the Spire Muse agent, a new creation by Notto J. W. Thelle. To make the distinction clear, the Max patches in the Run folder have a completely different design than the ones in the Traning folder.
+This version of MASOM has been modified to work with the CCCP interface. The training module (including all the files in the Training folder) is essentially a modified version of MASOM. The run-time module (everything in the Run folder) is the Spire Muse agent, a new creation by Notto J. W. Thelle. To make the distinction clear, the Max patches in the Run folder have a completely different design than the ones in the Traning folder.
 
 ---
 
