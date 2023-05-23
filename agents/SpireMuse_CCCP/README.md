@@ -1,16 +1,19 @@
-# Spire Muse v1.0
+# CCCP v1.0
 
-A Virtual Musical Partner for Creative Brainstorming
+by Notto J. W. Thelle and Bernt Isak Wærstad
 
-by Notto J. W. Thelle
+CCCP is an acronym for Co-Creative Communication Platform. CCCP is a work-in-progress musical agent platform for improvisational co-performance. It can be trained on any audio material, although we have only tested it on a limited range of material so far. CCCP is an audio in, audio out platform, and works with a large set of features extracted from the audio. The details of this can be learned in papers that are linked below.
 
-using MASOM (Musical Agent based on Self-Organizing Maps) v2.0.2 by Kıvanç Tatar
+CCCP borrows some core concepts from other musical agent systems in addition to featuring new concepts:
+- The self-organizing map (SOM) training module and Factor Oracle sequence modeling using SOM nodes is based on MASOM (Musical Agent based on Self-Organizing Maps) v2.0.2 by Kıvanç Tatar. The feature extraction required prior to the SOM training is also built upon MASOM, but is substantially modified. For the original version of MASOM, go to https://github.com/ktatar/MASOM
+- The long-form machine listening principle based on extracting and cataloging so-called chroma transtion matrices, as well as the principle of the agents being capable of displaying leading and following behaviors using different interactive modes is based upon Spire Muse by Notto J. W. Thelle. For the original version of Spire Muse, go to https://github.com/sirnotto/SpireMuse
+- The phrase extractor module of CCCP is based on ???? by ????, and requires setting up an MTTQ connection in Python.
 
-For the original version of MASOM, go to https://github.com/ktatar/MASOM
+We view CCCP as an open-source communal effort, and we encourage other developers to fork this repo and build their own versions of the platform. As we have done above, we would appreciate if contributors are credited.
 
-### Spire Muse vs. MASOM
+### CCCP vs. Spire Muse vs. MASOM
 
-This version of MASOM has been modified to work with the Spire Muse interface. The training module (including all the files in the Training folder) is essentially a modified version of MASOM. The run-time module (everything in the Run folder) is the Spire Muse agent, a new creation by Notto J. W. Thelle. To make the distinction clear, the Max patches in the Run folder have a completely different design than the ones in the Traning folder.
+Most of the Max patches in the training module are essentially modified versions of the MASOM patches. The patches in the run-time module (everything in the Run folder) are a combination of patches created by Notto J. W. Thelle and Bernt Isak Wærstad. To make the distinction clear, the Max patches in the Run folder have a completely different design than the ones in the Traning folder.
 
 ---
 
