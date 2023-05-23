@@ -124,17 +124,21 @@ This section converts the original songs in the training dataset to a sequence o
 
 ========================
 
-# Running Spire Muse
+# Running CCCP
 
 ## 1- Initialize
 
 Open SpireMuse_main.maxpat. Drag and drop the folder you have trained with the Spire Muse-MASOM process. Voila, Spire Muse is ready for action. But read the following explanations first!
 
-## 2- Influence parameters
+## 2- Start the MTTQ client
+
+Coming
+
+## 3- Influence parameters
 
 The listening module can be directed to give some groups of features more weight than others, and this alters the subsequent matching algorithms considerably. The four influence parameters are rhythmic, spectral, melodic, and harmonic. The rhythmic parameter weights the duration feature. Setting the rhythmic parameter high and the rest low will make the agent search for material in the corpus that follows the timing of the input closely, but disregards the other features. The spectral parameter weights the MFCC features. The melodic parameter focuses on the fundamental frequency, and the harmonic parameter weights the chroma features. By tweaking the sliders, any combination of relative influence is possible.
 
-## 3- Interactive modes
+## 4- Interactive modes
 
 _Shadowing mode_ is the baseline behavior of the musical agent. In shadowing mode, the agent responds reactively and outputs the closest matching audio slice in the corpus for each onset registered in the input. Here, the influence parameters come into play: closest matches vary depending on how they are set. SOM nodes are not looked up in shadowing mode. Instead, instances from the input are compared directly to the feature vectors belonging to the audio slices in the corpus. Looking up audio slices directly creates a better contrast to the mirroring mode, which looks up SOM nodes.
 
@@ -149,33 +153,37 @@ The song that is automatically loaded from the corpus into the FO is selected ba
 
 If one or more same songs feature in both these groups, the FO will load the highest scoring match and initiate the change. After a change, the input buffer will start building anew, so changes will be no more frequent than the time it takes to fill the buffer.
 
-## 4- Automation view vs. Manual view
+## 5- Auto Modes view vs. Manual Modes view
 
-Before starting the first session, the user should be aware of the concept of Automation vs. Manual view. By default, Spire Muse begins in the Automation view, meaning that the agent will primarily decide its own states based on what the user is playing. In this view, the user only has indirect influence on the agent's choices through the negotiation panel, featuring the following buttons:
+Before starting the first session, the user should be aware of the concept of Auto Modes vs. Manual Modes. By default, CCCP begins in Auto Modes, meaning that the agent will primarily decide its own states based on what the user is playing. In this view, the user only has indirect influence on the agent's choices through the negotiation panel, featuring the following buttons:
 
 - _Go back_ forces the agent to its previous mode. This backtracking can be repeated. The agent tracks its own history, which also includes FO song changes and previously liked states (Thumbs up markers).
 - _Pause_ will mute the agent but it is still listening. This is useful if the user needs time to figure out something in his or her playing without interruption.
 - Upon pressing _Continue_, the session will proceed based on the most recent listening.
 - _Change_ will force the agent away from its current state. For now, this sets the interactive mode, influences, and FO song selection randomly.
 
-In Automation view, the agent also autonomously loads new songs into the Factor Oracle based on the tempo and meso level harmonic dynamics of the user's playing.
+In Auto Modes, the agent also autonomously loads new songs into the Factor Oracle based on the tempo and meso level harmonic dynamics of the user's playing.
 
-Addionally, the _Thumbs Up_ button signals to the agent that the user is enjoying the current interaction, and stays in the same state for the next 30 seconds.
+Addionally, the _Thumbs Up_ button signals to the agent that the user is enjoying the current interaction, and stays in the same state for the next 15 seconds.
 
-In Automation view, the agent is designed to behave autonomously in ways that cannot be predicted by the user. This may lead to interesting surprised. On the other hand, automated shifts in interactive modes will underperform in some contexts, especially in cases where corpora are sparse or consist of heterogeneous audio material. Therefore, there is an option to switch to Manual view after starting a session. This is done using the Tab key. In Manual view, the agent no longer autonomously switches modes or loads songs automatically into the Factor Oracle. The negotiation panel is replaced by buttons where the user can choose the Shadowing, Mirroring and Coupling Modes directly. The song menu in the State panel becomes clickable, and the user may pick any song from the corpus to train the FO. Muting the agent is now done in the Agent panel instead of the Pause/Continue toggle as in Automation view.
+In Auto Modes, the agent is designed to behave autonomously in ways that cannot be predicted by the user. This may lead to interesting surprises. On the other hand, automated shifts in interactive modes will underperform in some contexts, especially in cases where corpora are sparse or consist of heterogeneous audio material. Therefore, there is an option to switch to Manual Modes after starting a session. This is done using the Tab key. In Manual Modes, the agent no longer autonomously switches modes or loads songs automatically into the Factor Oracle. The negotiation panel is replaced by buttons where the user can choose the Shadowing, Mirroring and Coupling Modes directly. The song menu in the State panel becomes clickable, and the user may pick any song from the corpus to train the FO. Muting the agent is now done in the Agent panel instead of the Pause/Continue toggle as in Automation view.
 
 Manual selection of modes and songs will result in a more contemplative kind of session, giving the user more time to explore each mode and the generative modeling uninterrupted.
 
 ## This is a work in progress, your feedback is welcome
 
-Spire Muse has not yet undergone its first user study. Up until this happens (August 2021), the software will be subject to frequent updates and design changes. If you have any feedback, pleae don't hesitate to contact me at sirnotto@yahoo.co.uk
+CCCP has not yet undergone its first user study. Up until this happens, the software will be subject to frequent updates and design changes. If you have any feedback, pleae don't hesitate to contact us at sirnotto@yahoo.co.uk or berntisak@gmail.com
 
 =====================
-  
+## Publications related to CCCP
+
+- Thelle, N. J. W., & Wærstad, B. I. (2023). Co-Creative Spaces: The machine as a collaborator. [Conference paper]. New Interfaces for Musical Expression (NIME 2023), Mexico City, Mexico.
 
 ## Publications related to Spire Muse
 
 - Thelle, N. J. W. & Pasquier, P. (2021). Spire Muse: A Virtual Musical Parner for Creative Brainstorming. In Proceedings of New Interfaces for Musical Expression (NIME 2021). NYU Shanghai, June 14-18, 2021.
+- Thelle, N. J. W. (2022). Mixed-initiative music making: Collective agency in interactive music systems [PhD, The Norwegian Academy of Music].
+
 
 ## Publications related to MASOM:
 
@@ -188,11 +196,11 @@ Agents based on Self-Organizing Maps. Submitted to the Artificial Intelligence J
 
 - Boersen, R., Liu-Rosenbaum, A., Tatar, K., & Pasquier, P. (2020). Chatterbox: an interactive system of gibberish agents. In Proceedings of the 26th International Symposium on Electronic Art ISEA2020 (pp. 55–62). Montreal, Canada.
 
-More info is available at: kivanctatar.com/masom
-
 ## Acknowledgements
 
-I would like to thank Kıvanç Tatar and Philippe Pasquier for sharing the MASOM code and departing knowledge about the system through email correspondence and online meetings. A special thanks to Philippe Pasquier for guidance and for co-authoring the 2021 NIME paper. I would also like to thank Bernt Isak Wærstad for his invaluable feedback.
+The development of CCCP was made possible by funding from Arts Council Norway, Norwegian Composers’ fund, Norwegian Academy of Music, and Norsk jazzforum.
+
+We would like to thank Kıvanç Tatar and Philippe Pasquier for sharing the MASOM code and departing knowledge about the system through email correspondence and online meetings. A special thanks to Philippe Pasquier for guidance and for co-authoring the 2021 NIME paper. 
 
 Acknowledgements related to MASOM at kivanctatar.com/masom
 
