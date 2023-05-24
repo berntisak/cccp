@@ -7,7 +7,7 @@ CCCP is an acronym for Co-Creative Communication Platform. CCCP is a work-in-pro
 CCCP borrows some core concepts from other musical agent systems in addition to featuring new concepts:
 - The self-organizing map (SOM) training module and Factor Oracle sequence modeling using SOM nodes is based on MASOM (Musical Agent based on Self-Organizing Maps) v2.0.2 by Kıvanç Tatar. The feature extraction required prior to the SOM training is also built upon MASOM, but is substantially modified. For the original version of MASOM, go to https://github.com/ktatar/MASOM
 - The long-form machine listening principle based on extracting and cataloging so-called chroma transtion matrices, as well as the principle of the agents being capable of displaying leading and following behaviors using different interactive modes is based upon Spire Muse by Notto J. W. Thelle. For the original version of Spire Muse, go to https://github.com/sirnotto/SpireMuse
-- The phrase extractor module of CCCP is an extension by Bernt Isak Wærstad, and requires setting up an MTTQ connection in Python.
+- The phrase extractor module of CCCP is an extension by Bernt Isak Wærstad, and requires setting up an MQTT connection in Python.
 
 We view CCCP as an open-source communal effort, and we encourage other developers to fork this repo and build their own versions of the platform. As we have done above, we would appreciate if contributors are credited.
 
@@ -130,7 +130,7 @@ This section converts the original songs in the training dataset to a sequence o
 
 Open SpireMuse_main.maxpat. Drag and drop the folder you have trained with the Spire Muse-MASOM process. Voila, Spire Muse is ready for action. But read the following explanations first!
 
-## 2- Start the MTTQ client
+## 2- Start the MQTT client
 
 Coming
 
