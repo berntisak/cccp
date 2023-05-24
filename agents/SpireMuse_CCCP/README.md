@@ -7,7 +7,7 @@ CCCP is an acronym for Co-Creative Communication Platform. CCCP is a work-in-pro
 CCCP borrows some core concepts from other musical agent systems in addition to featuring new concepts:
 - The self-organizing map (SOM) training module and Factor Oracle sequence modeling using SOM nodes is based on MASOM (Musical Agent based on Self-Organizing Maps) v2.0.2 by Kıvanç Tatar. The feature extraction required prior to the SOM training is also built upon MASOM, but is substantially modified. For the original version of MASOM, go to https://github.com/ktatar/MASOM
 - The long-form machine listening principle based on extracting and cataloging so-called chroma transtion matrices, as well as the principle of the agents being capable of displaying leading and following behaviors using different interactive modes is based upon Spire Muse by Notto J. W. Thelle. For the original version of Spire Muse, go to https://github.com/sirnotto/SpireMuse
-- The phrase extractor module of CCCP is based on ???? by ????, and requires setting up an MTTQ connection in Python.
+- The phrase extractor module of CCCP is an extension by Bernt Isak Wærstad, and requires setting up an MTTQ connection in Python.
 
 We view CCCP as an open-source communal effort, and we encourage other developers to fork this repo and build their own versions of the platform. As we have done above, we would appreciate if contributors are credited.
 
@@ -169,6 +169,12 @@ Addionally, the _Thumbs Up_ button signals to the agent that the user is enjoyin
 In Auto Modes, the agent is designed to behave autonomously in ways that cannot be predicted by the user. This may lead to interesting surprises. On the other hand, automated shifts in interactive modes will underperform in some contexts, especially in cases where corpora are sparse or consist of heterogeneous audio material. Therefore, there is an option to switch to Manual Modes after starting a session. This is done using the Tab key. In Manual Modes, the agent no longer autonomously switches modes or loads songs automatically into the Factor Oracle. The negotiation panel is replaced by buttons where the user can choose the Shadowing, Mirroring and Coupling Modes directly. The song menu in the State panel becomes clickable, and the user may pick any song from the corpus to train the FO. Muting the agent is now done in the Agent panel instead of the Pause/Continue toggle as in Automation view.
 
 Manual selection of modes and songs will result in a more contemplative kind of session, giving the user more time to explore each mode and the generative modeling uninterrupted.
+
+## 6- Phrase extractor
+
+The phrase extractor detects onsets on the incoming audio and registers the interonset intervals. If a set of conditions are met (e.g. minimum 3 onsets with no more than 1.5 seconds interval), a new phrase is registered. To be able to use this with the Factor Oracle algorithm the intervals needed to be quantised, so all intervals are clustered with the unsupervised algorithm Affinity Propagation. This enables the phrase extractor to capture the phrasings of the musician it is listening to and create variations of those using the Factor Oracle algorithm, when playing back audio slices from the SOM sequences.
+
+The phrase extractor can be toggled on and off. When active, it performs its machine listening continuously, but pnly responds with audio when the agent is in mirroring mode.
 
 ## This is a work in progress, your feedback is welcome
 
