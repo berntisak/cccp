@@ -10,7 +10,8 @@ class MQTT_Client:
         self.port = port
         client_id = f'cccp-py-mqtt-{random.randint(0, 1000)}'
         # Set Connecting Client ID
-        self.client = mqtt.Client(client_id)
+        #self.client = mqtt.Client(client_id)
+        self.client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1)
         # For debug printing
         self.client.on_message=self.on_message
         self.topics = []
